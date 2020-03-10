@@ -1,0 +1,44 @@
+.footer
+    padding: 10rem 10rem 0 10rem
+    background-color: $footer-bg-color
+.footer-header
+    padding-bottom: 0.7rem
+    font: 600 18px $main-font
+    color: $content-black
+    border-bottom: solid 1px $content-black
+.footer-text
+    font: 500 13px $main-font
+    color: $content-black
+    line-height: 23px
+.know-us
+    display: inline-block
+    border: 1px solid $second-color
+    border-radius: 3rem
+    font: 700 15px $main-font
+    color: $second-color
+    transition: 0.4s ease
+    &:hover
+        background-color: $second-color
+        color: white
+.footer-link
+    font: 500 15px $main-font
+    color: $content-black
+    text-decoration: underline!important
+.footer-link-text
+    font: 500 15px $main-font
+    color: $content-black
+
+.social-banner
+    border-top: 1px solid $content-black
+    img 
+        width: 17px
+        height: 18px
+    &__container
+        justify-content: flex-end
+
+@media (max-width: 767px)
+    .footer
+        padding: 8rem 8rem 0 8rem
+    .social-banner
+        &__container
+            justify-content: flex-start

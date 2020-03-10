@@ -1,0 +1,42 @@
+$main-font: Montserrat, sans-serif
+$main-color: #1E60A0
+$second-color: #042D5F
+$content-black: #1E1E1E
+$footer-bg-color: #D8D8D8
+$idea-modal-color: #F2F5F9
+$modal-bg-color: #F2F5F9
+$portfolio-scroll-text: #FAFAFA
+// $breadCrumb-passive-color: #7A7A7A
+// $subMenu-border-color: #E3E3E3
+// $nav-color: #7A7A7A
+
+html
+	font-size: 10px
+body
+	width: 100%
+	height: 100%
+	margin: 0
+	padding: 0
+	font-family: $main-font
+a 
+	text-decoration: none!important
+
+.content
+	// max-width: 1400px
+	margin: 0 auto!important
+	
+@media (max-width: 991px)
+	html
+		font-size: 6px
+
+@import common
+@import preloader
+@import mixin
+@import components/navbar
+@import components/footer
+@import components/index
+@import components/about
+@import components/slickSlider
+@import components/portfolio
+
+@import fonts

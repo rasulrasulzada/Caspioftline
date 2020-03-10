@@ -1,0 +1,424 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url("font/Montserrat-Medium.otf");
+  }
+@font-face {
+    font-family: Montserrat-Light;
+    src: url("font/Montserrat-Light.otf");
+  }
+  body{
+      font-family: Montserrat-Medium;
+      background-color: #f2f2f2;
+  }
+
+.img-effect{
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+}
+
+
+
+.head{
+    width: 100%;
+    height: 700px;
+    background-image: url('img/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+    position: relative;
+}
+.head img{
+    width: 100%;
+    height: 700px;
+}
+.head-opacity{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    opacity: 0.9;
+}
+.careers-head-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+}
+.careers-head-text p{
+    font-size: 16px;
+    text-align: center;
+}
+.careers-head-text div{
+    font-size: 40px;
+    text-align: center;
+    padding: 10px 100px;
+    text-transform: uppercase;
+}
+.careers-head-text div button{
+    width: 198px;
+    height: 60px;
+    border-radius: 30px;
+    background: #1e60a0;
+    color: #fafafa;
+    cursor: pointer;
+}
+.careers-top{
+   height: 100px;
+}
+.digital-marketolog{
+    max-width: 940px;
+    height: 55px;
+    position: relative;
+    margin: auto;
+    background-color: #fffafa;
+    line-height: 55px;
+    margin-bottom: 60px;
+    box-shadow: 0px 9px 21px rgba(30, 96, 160, 0.07);
+}
+.digital-marketolog a{
+    margin-left: 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+}
+.digital-click{
+    text-align: center;
+    display: block;
+}
+.careers-main{
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+}
+.careers-all-cv{
+    margin-bottom: 18px;
+}
+.careers-email, .careers-phone{
+    margin-right: 16px;
+}
+.careers-cv-address{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    vertical-align: 3px;
+}
+.careers-map{
+    margin-right: 18px;
+    margin-left: 2px;
+}
+.careers-cv{
+    line-height: 40px;
+}
+.careers-text-upload{
+    display: flex;
+    margin-bottom: 37px;
+    font-family: Montserrat-Light;
+    font-size: 16px;
+}
+.careers-width{
+    width: 50%;
+    height: 234px;
+    position: relative;
+}
+.careers-text p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+.careers-button{
+    width: 200px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+.careers-button-cv{
+    width: 198px;
+    height: 46px;
+    border: 1px solid #042D5F;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #042D5F;
+    cursor: pointer;
+}
+.careers-button-send{
+    width: 198px;
+    height: 60px;
+    background: #1E60A0;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    color: #fafafa;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+.careers-scroll-list{
+    max-width: 940px;
+    height: auto;
+    margin: auto;
+}
+.careers-scroll-limit{
+    width: auto;
+    height: 165px;
+    overflow: hidden;
+}
+
+.careers-list-link{
+    max-width: 940px;
+    height: 54px;
+    background: #fffafa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 54px;
+    border-bottom: 1px solid #1e60a0;
+}
+.careers-list-link a{
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.careers-scroll{
+    width: auto;
+    height: 150px;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+}
+.careers-scroll img{
+    cursor: pointer;
+}
+.careers-scroll p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1e1e1e;
+}
+
+/* contact */
+
+
+
+
+.contact{
+    max-width: 941px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    margin-top: -340px;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 150px;
+}
+.contact-head-text{
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    color: #fafafa;
+    font-size: 40px;
+}
+.contact-width-1{
+    width: 639px;
+    background: #f2f5f9;
+}
+.contact-padding{
+    padding: 40px 60px;
+}
+.contact-width-1 p{
+    margin-bottom: 40px;
+}
+.contact-width-2{
+    width: 302px;
+    background: #042d5f;
+    padding: 40px 46px;
+}
+.row{
+    display: flex;
+}
+.input {
+    width: 210px;
+    background: transparent;
+    border-bottom: 0.25px solid #1e60a0;
+    padding: 10px 15px;
+    outline-style: none;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+label{
+    font-size: 14px;
+    color: #1e60a0;
+    font-family: Montserrat-Light;
+}
+.input-text{
+    font-size: 16px;
+    font-weight: 500;
+    color: #042d5f;
+    font-family: Montserrat-Medium;
+}
+.contact-top{
+    margin-top: 30px;
+}
+::placeholder{
+    font-size: 14px;
+    color: #1e60a0;
+}
+.input-width{
+    width: 470px;
+    background: transparent;
+    border-bottom: 0.25px solid #1e60a0;
+    padding: 10px 15px;
+    margin-right: 20px;
+    outline-style: none;
+    margin-top: 10px;
+}
+.contact-send{
+    margin-top: 40px;
+}
+.contact-send button{
+    width: 500px;
+    height: 42px;
+    background: #1e60a0;
+    border-radius: 30px;
+    color: #fafafa;
+    cursor: pointer;
+    outline-style: none;
+    font-size: 16px;
+}
+.contact-map{
+    color: #fafafa;
+    margin-bottom: 40px;
+}
+.contact-map p{
+    line-height: 50px;
+    font-size: 15px;
+    font-family: Montserrat-Light;
+}
+.contact-map small{
+    font-size: 12px;
+    font-family: Montserrat-Light;
+    line-height: 20px;
+}
+.contact-map ul li{
+    list-style: none;
+    font-size: 12px;
+    font-family: Montserrat-Light;
+    line-height: 20px;
+}
+
+
+
+/* faq */
+
+
+
+
+
+.faq-head-text{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: #fafafa;
+    font-size: 40px;
+}
+.faq-head-text p{
+    text-align: center;
+    font-size: 16px;
+}
+.faq-head-text div{
+    padding: 10px 80px;
+    text-align: center;
+    font-size: 40px;
+}
+.faq-question{
+    max-width: 620px;
+    height: 385px;
+    background: #f2f5f9;
+    margin: auto;
+    margin-top: -275px;
+    position: relative;
+    margin-bottom: 150px;
+}
+.faq-question p{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 37px;
+}
+.faq-email{
+    font-family: Montserrat-Light;
+}
+.faq-question-text{
+    text-align: center;
+}
+.faq-question-text p{
+    font-size: 16px;
+    color: #1e60a0;
+}
+.faq-question-text div{
+    padding: 0px 500px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #042d5f;
+    margin-bottom: 100px;
+}
+.faq-list{
+    max-width: 940px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 130px;
+}
+.faq-list ul li{
+    width: 100%;
+    min-height: 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(4, 45, 95, 0.1);
+    border-radius: 5px;
+    padding: 30px 30px;
+    margin-bottom: 40px;
+    list-style: none;
+    font-size: 18px;
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+}
+.faq-list ul li span{
+    position: absolute;
+    right: 0px;
+    padding: 0px 30px;
+    margin-top: -10px;
+}
+.faq-list ul li p{ 
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Montserrat-Light;
+    line-height: 28px;
+    color: #042d5f;
+    margin-right: 40px;
+}
+.closelist{
+    display: none;
+}
+.openlist{
+    display: block;
+}

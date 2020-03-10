@@ -1,0 +1,104 @@
+extends ../pug_includes/head
+
+block unique-content
+    main.main
+        .container.px-3.position-absolute.nav-wrapper
+            include ../pug_includes/navbar.pug
+        .d-flex.align-items-center.position-relative
+           img.img-fluid.w-100(b-lazyload='', src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAABCAYAAADgt+FrAAAAEklEQVR42mMUZBa8yDAKhhUAAMLZAPhUuAzzAAAAAElFTkSuQmCC', data-src="../src/img/home_slide.jpg")
+           img.to-down.mx-auto(src="../src/img/icon_scrool_down_white.svg")
+           .container.p-0.position-absolute.a-x-auto
+            .idea
+                .content-title.mb-3 CASPISOFTLINE
+                .content-motto
+                    | FAST AND SMOOTH TECHNICAL LAUNCH FOR YOUR STARTUP
+                button.btn.content-btn.text-black.mt-4(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
+                #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                    .modal-dialog.mx-auto.idea-modal(role='document')                      
+                        .modal-content.mx-auto.mt-5.idea-modal__content
+                            button.close.custom-close(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') &times;
+                            .modal-header.p-0
+                                .idea-modal__title Send Your Idea    
+                            .alert.alert-danger.modal-alert(role="alert")
+                                | Please fill all inputs!
+                            form(action="")
+                                .d-flex.flex-wrap.justify-content-around
+                                    .form-item
+                                        label.idea-label(for="name") Your Name
+                                        input#name.idea-input(type="text", name="name",placeholder="name")
+                                    .form-item
+                                        label.idea-label(for="surname") Your Surname
+                                        input#surname.idea-input(type="text", name="surname", placeholder="surname")
+                                    .form-item
+                                        label.idea-label(for="email") Your Email
+                                        input#email.idea-input(type="email", name="email",placeholder="email")
+                                    .form-item
+                                        label.idea-label(for="") Your Number
+                                        .d-flex.w-100
+                                            select#selectLand.idea-input.form-select.pr-0.pb-0(name="")
+                                                option AZ
+                                                option EN
+                                                option RU
+                                            .form-column.my-3
+                                            input#number.idea-input.pl-4.number-input(type="number",max="9")
+                                .form-item.w-100
+                                    label.idea-label(for="yourIdea") Your Idea
+                                    textarea#idea.w-100.idea-input(name="yourIdea", rows="7", placeholder="Write your idea...")
+                                button#sendBtn.w-100.idea-modal-btn(type="button") SEND
+        #main-content.container
+            .content-header.MT-10
+                | TALENT & SERVICES FOR THE EXTENDED WORKFORCE.
+            .content-text
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum dignissim semper.
+            .d-flex.justify-content-center.flex-wrap.MT-13
+                a(href="#").my-link.mx-3.mb-5.d-flex.flex-column.align-items-center.justify-content-center
+                    .my-img.mb-5
+                        img(src="../src/img/coworking.svg")
+                    .my-header.mt-5 
+                        | ABOUT US
+                a(href="#").my-link.mx-3.mb-5.d-flex.flex-column.align-items-center.justify-content-center
+                    .my-img.mb-5
+                        img(src="../src/img/process.svg")
+                    .my-header.mt-5 
+                        | PROCESS
+        .portfolio.d-flex.MT-12
+            .portfolio__explore
+                .explore
+                    .content-title.mb-3 CASPISOFTLINE
+                    .content-motto
+                        | EXPLORE OUR PORTFOLİO
+                    a.content-btn.text-black.d-inline-block.mt-4(href="") EXPLORE
+            .portfolio__works
+                .work-row.w-100
+                    a.portfolio-work(href="#")
+                        img(src="../src/img/IMG.png", alt="")
+                        .blue-div
+                    a.portfolio-work(href="#")
+                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
+                        .blue-div
+                .work-row.w-100
+                    a.portfolio-work(href="#")
+                        img(src="../src/img/IMG.png", alt="")
+                        .blue-div
+                    a.portfolio-work(href="#")
+                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
+                        .blue-div
+                .work-row.w-100
+                    a.portfolio-work(href="#")
+                        img(src="../src/img/IMG.png", alt="")
+                        .blue-div
+                    a.portfolio-work(href="#")
+                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
+                        .blue-div
+        .careers.d-flex
+            .careers__info
+                img(src="../src/img/backgroundforcareers.svg")
+                .explore
+                    .careers-title.mb-3 CAREERS
+                    .content-header.text-left
+                        | Let`s create a new future together
+                    a.content-btn.btn-white.d-inline-block.mt-4(href="") EXPLORE
+            .careers__content
+                img(src="../src/img/home_careers,Careers.jpg")
+    include ../pug_includes/footer.pug

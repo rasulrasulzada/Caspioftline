@@ -1,0 +1,61 @@
+.top-div
+    width: 100%
+    height: 70rem
+    background-color: black
+
+.portfolio-wrapper
+    width: 94rem
+    max-width: 100%
+    margin-top: -13rem
+    overflow: hidden
+
+.work-row
+    display: flex
+    flex-wrap: wrap
+.work-row:nth-child(odd)
+    .portfolio-work:first-child
+        flex-basis: 45%
+    .portfolio-work:last-child
+        flex-basis: 55%
+.work-row:nth-child(even)
+    .portfolio-work:first-child
+        flex-basis: 55%
+    .portfolio-work:last-child
+        flex-basis: 45%
+.portfolio-work
+    position: relative
+    display: flex
+    height: 234px
+    &:hover
+        .blue-div
+            background-color: transparent
+    img
+        width: 100%
+        height: 100%
+        transition: 0.4s ease
+    .blue-div
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(4, 45, 95, .7)
+        transition: 0.4s ease
+        
+            
+
+.show-more
+    bottom: 3.5rem
+    img
+        cursor: pointer
+
+.scroll-text
+    font: 400 16px $main-font
+    color: $portfolio-scroll-text
+    text-align: center
+.rotate-arrow
+    transform: rotate(180deg)
+
+@media (max-width: 768px)
+    .portfolio-work
+        flex-basis: 100%!important
