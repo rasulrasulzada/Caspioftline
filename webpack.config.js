@@ -2,7 +2,9 @@ var path = require("path");
 var { CleanWebpackPlugin } = require("clean-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const fs = require('fs')
+var fs = require('fs');
+var CopyPlugin = require('copy-webpack-plugin');
+
 
 
 function generateHtmlPlugins (templateDir) {
@@ -64,20 +66,6 @@ module.exports = {
         test: /\.pug$/,
         use: 'pug-loader'
       },
-      {
-        test: /\.(jpg|png|svg)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              esModule: false,
-              name: "[name].[ext]",
-              outputPath: "img/",
-              publicPath: "img/"
-            }
-          }
-        ]
-      }
     ]
   },
   plugins: [
@@ -90,6 +78,9 @@ module.exports = {
     // }),
     new MiniCssExtractPlugin({
       filename: "styles.min.css"
-    })
+    }),
+    new CopyPlugin([
+      { from: 'src/img', to: 'img' }
+    ]),
   ].concat(htmlPlugins)
 };

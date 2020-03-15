@@ -1,0 +1,70 @@
+.content-body
+    position: relative
+    max-width: 1400px
+    padding-top: 284px
+    padding-bottom: 12.5rem
+    background-color: $faq-bg-color
+
+.question
+    position: absolute
+    top: -24rem
+    max-width: 620px
+    padding: 4rem 6rem
+    background-color: $modal-bg-color
+    &__title
+        font: 600 18px $main-font
+        color: $content-black
+    .question-alert
+        visibility: hidden
+    &__form
+        .question-item
+            width: 240px
+            margin-bottom: 2rem
+
+.q-title
+    font: 600 1.6rem $main-font
+    color: $main-color
+.q-header
+    font: 600 4rem $main-font
+    color: $second-color
+
+.faq-acc-item
+    background-color: white
+    &__header
+        cursor: pointer
+        .faq-item-title
+            font: 600 18px $main-font
+            color: $second-color
+        img 
+            transition: 0.4s ease
+    &__body
+        font: 400 16px $main-font
+        color: $second-color
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.4s ease
+        .faq-acc-text
+            padding: 0 9.6rem 3rem 3rem
+    
+.faq-acc-item--active
+    .faq-acc-item__header
+        img 
+            transform: rotate(180deg)
+@media (max-width: 768px)
+    .question
+        max-width: 520px
+        &__form
+            .question-item
+                width: 100%
+
+@media (max-width: 520px)
+    .question
+        max-width: 90%
+
+@media (max-width: 370px)
+    .faq-acc-item
+        &__header
+            .faq-item-title
+                font-size: 13px
+        &__body
+            font-size: 13px

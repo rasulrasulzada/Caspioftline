@@ -1,3 +1,14 @@
+const  ideaAlert = (alerType,alertMessage) => {
+    document.querySelector(".modal-alert").classList.add("visible");
+    document.querySelector(".modal-alert").classList.add(alerType);
+    document.querySelector(".modal-alert").textContent = alertMessage;
+  
+    setTimeout(() => {
+        document.querySelector(".modal-alert").classList.remove("visible");
+        document.querySelector(".modal-alert").classList.remove(alerType);
+    }, 3000);
+  }
+  
 const sendIdea = () => {
     $("#sendBtn").click(() => {
         const name = $("#name").val().trim();
@@ -9,18 +20,20 @@ const sendIdea = () => {
         const land = sel.options[sel.selectedIndex].value;
 
         if(name === "" || surname === "" || email === "" || number === "" || idea === "") {
-            $(".modal-alert").addClass("visible");
+            ideaAlert("alert-danger", "Please fill all inputs!")
         }  else {
             const data = {
-                name: name,
-                surname: surname,
-                email: email,
+                name,
+                surname,
+                email,
                 number: land + number,
-                idea: idea
+                idea
             }
-            console.log(data)
+            console.log(data)//POST
 
-            $(".modal-alert").removeClass("visible");
+            ideaAlert("alert-success", "Your idea was successfully sent")
+
+            //Clear inputs
             $("#name").val("")
             $("#surname").val("")
             $("#email").val("")
@@ -37,7 +50,6 @@ const sendIdea = () => {
 const ideaForm = () => {
     
     $('.idea-input').on('focus', (e) => {
-        console.log(e.target);
         $(e.target).prev().addClass("invisible");
     }); 
 

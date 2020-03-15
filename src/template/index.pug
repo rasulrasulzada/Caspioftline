@@ -1,12 +1,12 @@
 extends ../pug_includes/head
 
 block unique-content
+    .container.px-3.position-absolute.nav-wrapper
+        include ../pug_includes/navbar.pug
     main.main
-        .container.px-3.position-absolute.nav-wrapper
-            include ../pug_includes/navbar.pug
         .d-flex.align-items-center.position-relative
-           img.img-fluid.w-100(b-lazyload='', src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAABCAYAAADgt+FrAAAAEklEQVR42mMUZBa8yDAKhhUAAMLZAPhUuAzzAAAAAElFTkSuQmCC', data-src="../src/img/home_slide.jpg")
-           img.to-down.mx-auto(src="../src/img/icon_scrool_down_white.svg")
+           img.img-fluid.w-100(b-lazyload='', src="./img/1170x700-e0e0d57f.png", data-src="./img/home_slide.jpg")
+           img.to-down.mx-auto(src="./img/icons/icon_scrool_down_white.svg")
            .container.p-0.position-absolute.a-x-auto
             .idea
                 .content-title.mb-3 CASPISOFTLINE
@@ -20,8 +20,7 @@ block unique-content
                                 span(aria-hidden='true') &times;
                             .modal-header.p-0
                                 .idea-modal__title Send Your Idea    
-                            .alert.alert-danger.modal-alert(role="alert")
-                                | Please fill all inputs!
+                            .alert.modal-alert(role="alert")
                             form(action="")
                                 .d-flex.flex-wrap.justify-content-around
                                     .form-item
@@ -54,12 +53,12 @@ block unique-content
             .d-flex.justify-content-center.flex-wrap.MT-13
                 a(href="#").my-link.mx-3.mb-5.d-flex.flex-column.align-items-center.justify-content-center
                     .my-img.mb-5
-                        img(src="../src/img/coworking.svg")
+                        img(src="./img/icons/coworking.svg")
                     .my-header.mt-5 
                         | ABOUT US
                 a(href="#").my-link.mx-3.mb-5.d-flex.flex-column.align-items-center.justify-content-center
                     .my-img.mb-5
-                        img(src="../src/img/process.svg")
+                        img(src="./img/icons/process.svg")
                     .my-header.mt-5 
                         | PROCESS
         .portfolio.d-flex.MT-12
@@ -72,33 +71,33 @@ block unique-content
             .portfolio__works
                 .work-row.w-100
                     a.portfolio-work(href="#")
-                        img(src="../src/img/IMG.png", alt="")
+                        img(src="./img/IMG.png", alt="")
                         .blue-div
                     a.portfolio-work(href="#")
-                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
-                        .blue-div
-                .work-row.w-100
-                    a.portfolio-work(href="#")
-                        img(src="../src/img/IMG.png", alt="")
-                        .blue-div
-                    a.portfolio-work(href="#")
-                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
+                        img(src="./img/Business-Team-e1401705833531.jpg", alt="")
                         .blue-div
                 .work-row.w-100
                     a.portfolio-work(href="#")
-                        img(src="../src/img/IMG.png", alt="")
+                        img(src="./img/IMG.png", alt="")
                         .blue-div
                     a.portfolio-work(href="#")
-                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
+                        img(src="./img/Business-Team-e1401705833531.jpg", alt="")
+                        .blue-div
+                .work-row.w-100
+                    a.portfolio-work(href="#")
+                        img(src="./img/IMG.png", alt="")
+                        .blue-div
+                    a.portfolio-work(href="#")
+                        img(src="../img/Business-Team-e1401705833531.jpg", alt="")
                         .blue-div
         .careers.d-flex
             .careers__info
-                img(src="../src/img/backgroundforcareers.svg")
+                img(src="./img/icons/backgroundforcareers.svg")
                 .explore
                     .careers-title.mb-3 CAREERS
                     .content-header.text-left
                         | Let`s create a new future together
                     a.content-btn.btn-white.d-inline-block.mt-4(href="") EXPLORE
             .careers__content
-                img(src="../src/img/home_careers,Careers.jpg")
+                img(src="./img/home_careers,Careers.jpg")
     include ../pug_includes/footer.pug

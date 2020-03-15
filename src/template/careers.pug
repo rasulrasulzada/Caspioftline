@@ -1,0 +1,148 @@
+extends ../pug_includes/head
+
+block unique-content
+    .container.px-3.position-absolute.nav-wrapper
+        include ../pug_includes/navbar.pug
+    main.main
+        .d-flex.align-items-center.position-relative
+           img.img-fluid.w-100(b-lazyload='', src="./img/1170x700-e0e0d57f.png", data-src="./img/home_careers,Careers.jpg")
+           .bg-div.position-absolute
+           .container.p-0.position-absolute.a-x-auto
+            .mx-5
+                .content-title.text-center.mb-3 CAREERS
+                .content-motto.text-center
+                    | GROW AND WORK WITH US
+                a.d-block.max-w-20.mx-auto.btn.content-btn.content-btn--white.mt-4(href="#") JOIN US     
+        .careers-content.mx-auto.position-relative
+            img.bg-img.mw-100(src="./img/icons/backgroundforcareers.svg")
+            .container.px-3.MB-18
+                .accordion-wrapper
+                    .accordion-item 
+                        .accordion-item__header
+                            span Digital Marketolog
+                        .accordion-item__body.d-flex.flex-column
+                            .career-contact
+                                a.d-block.career-contact-link.mb-4(href="mailto:cv@caspisoftline.com") 
+                                    img.mr-4(src="./img/icons/mail_blue.svg")
+                                    | cv@caspisoftline.com
+                                .career-contact-link.mb-4
+                                    img.mr-4(src="./img/icons/location_blue.svg")
+                                    | 33 Grimes Pine Suite 167
+                                .d-flex.mb-4
+                                    img.mr-4(src="./img/icons/call_blue.svg")
+                                    a.career-contact-link(href="tel:6175355000") (617) 535-5000 /  
+                                    a.career-contact-link(href="tel:8775485266") (877) 548-5266
+                            .accordion-content.d-flex
+                                .accordion-text
+                                    | Maecenas a sapien eget ex ultricies iaculis quis pharetra metus. Praesent tincidunt nulla at sodales vestibulum. Pellentesque ut orci vitae quam vehicula elementum vitae et nunc. Quisque molestie lacinia nisl, sed porttitor odio pretium in. Aliquam tellus ante, tincidunt vitae sodales ac, mollis vel nisi. Donec ut imperdiet sapien. Donec pellentesque blandit pretium. 
+                                    | Proin tincidunt dapibus enim, in dignissim tortor dictum eu. Nam commodo accumsan nisi in pretium.
+                                .accordion-btns.d-flex
+                                    form(action="")
+                                        label.upload-btn.text-center.text-nowrap.m-3(for="file") UPLOAD CV
+                                            input#file(type="file", name="file",multiple, hidden)
+                                        button.accordion-btn.m-3(type="button") SEND
+                    .accordion-item 
+                        .accordion-item__header
+                            span Full-Stack Developer
+                        .accordion-item__body.d-flex.flex-column
+                            .career-contact
+                                a.d-block.career-contact-link.mb-4(href="mailto:cv@caspisoftline.com") 
+                                    img.mr-4(src="./img/icons/mail_blue.svg")
+                                    | cv@caspisoftline.com
+                                .career-contact-link.mb-4
+                                    img.mr-4(src="./img/icons/location_blue.svg")
+                                    | 33 Grimes Pine Suite 167
+                                .d-flex.mb-4
+                                    img.mr-4(src="./img/icons/call_blue.svg")
+                                    a.career-contact-link(href="tel:6175355000") (617) 535-5000 /  
+                                    a.career-contact-link(href="tel:8775485266") (877) 548-5266
+                            .accordion-content.d-flex
+                                .accordion-text
+                                    | Maecenas a sapien eget ex ultricies iaculis quis pharetra metus. Praesent tincidunt nulla at sodales vestibulum. Pellentesque ut orci vitae quam vehicula elementum vitae et nunc. Quisque molestie lacinia nisl, sed porttitor odio pretium in. Aliquam tellus ante, tincidunt vitae sodales ac, mollis vel nisi. Donec ut imperdiet sapien. Donec pellentesque blandit pretium. 
+                                    | Proin tincidunt dapibus enim, in dignissim tortor dictum eu. Nam commodo accumsan nisi in pretium.
+                                .accordion-btns.d-flex
+                                    form(action="")
+                                        label.upload-btn.text-center.text-nowrap.m-3(for="file") UPLOAD CV
+                                            input#file(type="file", name="file",multiple, hidden)
+                                        button.accordion-btn.m-3(type="button") SEND
+                    .accordion-item 
+                        .accordion-item__header
+                            span UX / UI Designer
+                        .accordion-item__body.d-flex.flex-column
+                            .career-contact
+                                a.d-block.career-contact-link.mb-4(href="mailto:cv@caspisoftline.com") 
+                                    img.mr-4(src="./img/icons/mail_blue.svg")
+                                    | cv@caspisoftline.com
+                                .career-contact-link.mb-4
+                                    img.mr-4(src="./img/icons/location_blue.svg")
+                                    | 33 Grimes Pine Suite 167
+                                .d-flex.mb-4
+                                    img.mr-4(src="./img/icons/call_blue.svg")
+                                    a.career-contact-link(href="tel:6175355000") (617) 535-5000 /  
+                                    a.career-contact-link(href="tel:8775485266") (877) 548-5266
+                            .accordion-content.d-flex
+                                .accordion-text
+                                    | Maecenas a sapien eget ex ultricies iaculis quis pharetra metus. Praesent tincidunt nulla at sodales vestibulum. Pellentesque ut orci vitae quam vehicula elementum vitae et nunc. Quisque molestie lacinia nisl, sed porttitor odio pretium in. Aliquam tellus ante, tincidunt vitae sodales ac, mollis vel nisi. Donec ut imperdiet sapien. Donec pellentesque blandit pretium. 
+                                    | Proin tincidunt dapibus enim, in dignissim tortor dictum eu. Nam commodo accumsan nisi in pretium.
+                                .accordion-btns.d-flex
+                                    form(action="")
+                                        label.upload-btn.text-center.text-nowrap.m-3(for="file") UPLOAD CV
+                                            input#file(type="file", name="file",multiple, hidden)
+                                        button.accordion-btn.m-3(type="button") SEND
+                    .accordion-item 
+                        .accordion-item__header
+                            span Java Developer
+                        .accordion-item__body.d-flex.flex-column
+                            .career-contact
+                                a.d-block.career-contact-link.mb-4(href="mailto:cv@caspisoftline.com") 
+                                    img.mr-4(src="./img/icons/mail_blue.svg")
+                                    | cv@caspisoftline.com
+                                .career-contact-link.mb-4
+                                    img.mr-4(src="./img/icons/location_blue.svg")
+                                    | 33 Grimes Pine Suite 167
+                                .d-flex.mb-4
+                                    img.mr-4(src="./img/icons/call_blue.svg")
+                                    a.career-contact-link(href="tel:6175355000") (617) 535-5000 /  
+                                    a.career-contact-link(href="tel:8775485266") (877) 548-5266
+                            .accordion-content.d-flex
+                                .accordion-text
+                                    | Maecenas a sapien eget ex ultricies iaculis quis pharetra metus. Praesent tincidunt nulla at sodales vestibulum. Pellentesque ut orci vitae quam vehicula elementum vitae et nunc. Quisque molestie lacinia nisl, sed porttitor odio pretium in. Aliquam tellus ante, tincidunt vitae sodales ac, mollis vel nisi. Donec ut imperdiet sapien. Donec pellentesque blandit pretium. 
+                                    | Proin tincidunt dapibus enim, in dignissim tortor dictum eu. Nam commodo accumsan nisi in pretium.
+                                .accordion-btns.d-flex
+                                    form(action="")
+                                        label.upload-btn.text-center.text-nowrap.m-3(for="file") UPLOAD CV
+                                            input#file(type="file", name="file",multiple, hidden)
+                                        button.accordion-btn.m-3(type="button") SEND
+                    .accordion-item 
+                        .accordion-item__header
+                            span Digital Marketolog
+                        .accordion-item__body.d-flex.flex-column
+                            .career-contact
+                                a.d-block.career-contact-link.mb-4(href="mailto:cv@caspisoftline.com") 
+                                    img.mr-4(src="./img/icons/mail_blue.svg")
+                                    | cv@caspisoftline.com
+                                .career-contact-link.mb-4
+                                    img.mr-4(src="./img/icons/location_blue.svg")
+                                    | 33 Grimes Pine Suite 167
+                                .d-flex.mb-4
+                                    img.mr-4(src="./img/icons/call_blue.svg")
+                                    a.career-contact-link(href="tel:6175355000") (617) 535-5000 /  
+                                    a.career-contact-link(href="tel:8775485266") (877) 548-5266
+                            .accordion-content.d-flex
+                                .accordion-text
+                                    | Maecenas a sapien eget ex ultricies iaculis quis pharetra metus. Praesent tincidunt nulla at sodales vestibulum. Pellentesque ut orci vitae quam vehicula elementum vitae et nunc. Quisque molestie lacinia nisl, sed porttitor odio pretium in. Aliquam tellus ante, tincidunt vitae sodales ac, mollis vel nisi. Donec ut imperdiet sapien. Donec pellentesque blandit pretium. 
+                                    | Proin tincidunt dapibus enim, in dignissim tortor dictum eu. Nam commodo accumsan nisi in pretium.
+                                .accordion-btns.d-flex
+                                    form(action="")
+                                        label.upload-btn.text-center.text-nowrap.m-3(for="file") UPLOAD CV
+                                            input#file(type="file", name="file",multiple, hidden)
+                                        button.accordion-btn.m-3(type="button") SEND
+                .more-career.position-absolute.a-x-auto.mx-auto.d-flex.flex-column.mt-5
+                    img.mx-auto.mb-3(src="./img/icons/arrow-down.svg")
+                    span.more-career-text.more scroll to see more
+                    span.more-career-text.few.d-none scroll to see few
+                   
+
+                
+    
+    include ../pug_includes/footer.pug

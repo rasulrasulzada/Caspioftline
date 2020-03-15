@@ -1,0 +1,56 @@
+extends ../pug_includes/head
+
+block unique-content
+    .container.px-3.position-absolute.nav-wrapper
+        include ../pug_includes/navbar.pug
+    main.main
+        .d-flex.align-items-center.position-relative
+           .map.w-100
+                iframe.w-100.h-100(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d388948.3248466814!2d49.57477494848202!3d40.394254379738996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku!5e0!3m2!1sen!2s!4v1584197366345!5m2!1sen!2s', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+           .contact-bg-div.position-absolute
+           .container.p-0.position-absolute.a-x-auto
+            .mx-5.content-motto.text-center CONTACT US
+        .contact-content.mx-auto.position-relative
+            .send-message.container.px-3.mx-auto.a-x-auto.d-flex
+                .message-div
+                    .message-title.mb-2 Send us a Message
+                    .message-alert.alert(role="alert")
+                    form.mt-2(action="")
+                        .d-flex.flex-wrap.justify-content-around.mb-5
+                            .message-item.d-flex.flex-column
+                                label.message-label(for="name") Your Name
+                                input#yourName.message-input(type="text", name="name", placeholder="adiniz...")
+                            .message-item.d-flex.flex-column
+                                label.message-label(for="surname") Your Surname
+                                input#yourSurname.message-input(type="text", name="surname", placeholder="soyadiniz...")
+                            .message-item.d-flex.flex-column
+                                label.message-label(for="email") Email Address
+                                input#yourEmail.message-input(type="email", name="email", placeholder="emailiniz...")
+                            .message-item.d-flex.flex-column
+                                label.message-label(for="subject") Subject
+                                input#yourSubject.message-input(type="text", name="subject", placeholder="movzu...")
+                            .w-100.d-flex.flex-column
+                                label.message-label(for="message") Your Message
+                                input#yourMessage.message-input(type="text", name="message", placeholder="mesajiniz...")
+                        button#messageBtn.message-btn.py-3.mt-3.w-100(type="button") SEND
+                .contact-ways
+                    .contact-way.mt-3.mb-5
+                        img.mb-5(src="./img/icons/location_white.svg") 
+                        .contact-way__title Our Location
+                        .contact-way__text
+                            | 809 McDermott Drive Apt. 073
+                            | 3401 Hintz Estate Suite 126  
+                    .contact-way.mt-3.mb-5
+                        img.mb-5(src="./img/icons/mail_white.svg")
+                        .contact-way__title Contact With Mail
+                        a.contact-way__text.d-block(href="mailto:lavon_tromp@yahoo.com") lavon_tromp@yahoo.com
+                        a.contact-way__text.d-block(href="mailto:korey.hirthe@yahoo.com") korey.hirthe@yahoo.com
+                        a.contact-way__text.d-block(href="mailto:mayert.norbert@esteban.us") mayert.norbert@esteban.us
+                    .contact-way
+                        img.mb-5(src="./img/icons/call_white.svg") 
+                        .contact-way__title Telephone
+                        a.contact-way__text.d-block(href="tel:809-131-9709") 809-131-9709
+                        a.contact-way__text.d-block(href="tel:842-267-7205") 842-267-7205
+                        a.contact-way__text.d-block(href="tel:653-070-7430") 653-070-7430                         
+    
+    include ../pug_includes/footer.pug

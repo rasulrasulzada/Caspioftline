@@ -7,6 +7,9 @@ import lazyload from "./lazyload"
 import {sendIdea,ideaForm} from "./sendIdea"
 import slickSlider from "./slickSlider"
 import scrollPortfolio from "./portfolio"
+import {careersAccordion,scrollCareers} from "./careers"
+import {inputFocus,handleMessageForm} from "./contact"
+import {faqAcc,handleQuestionForm} from "./faq"
 
 $(document).ready(function(){
 lazyload()
@@ -21,7 +24,17 @@ lazyload()
 
  scrollPortfolio();
 
-accordionFunc();
+ careersAccordion();
+ scrollCareers();
+
+ 
+
+ faqAcc();
+ handleQuestionForm();
+
+ inputFocus();
+ handleMessageForm();
+// accordionFunc();
 
  
 });

@@ -44,6 +44,9 @@
     border-bottom: 1px solid #1E60A0
     outline: none!important
     background-color: transparent
+    &::placeholder
+        font: 500 14px $main-font
+        color: $main-color
 .form-select
     width: auto
 .form-column
@@ -77,6 +80,9 @@
     color: $second-color
 
 .portfolio
+    max-width: 1400px
+    margin-left: auto
+    margin-right: auto
     &__explore
         display: flex
         flex-basis: 43%
@@ -93,11 +99,10 @@
 
 
 .careers
+    max-width: 1400px
+    margin-left: auto
+    margin-right: auto
     &__info
-        // background-image: url('../src/img/backgroundforcareers.svg')
-        // background-repeat: no-repeat
-        // background-position: center
-        // background-size: cover
         position: relative
         display: flex
         flex-basis: 43%

@@ -1,0 +1,104 @@
+.map
+    height: 70rem
+
+.contact-bg-div
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0, 0, 0, 0.85)
+
+.contact-content
+    max-width: 1400px
+    height: 45rem
+
+.send-message
+    // height: 60rem
+    margin-top: -30rem
+    // max-width: 96rem
+    position: absolute
+    .message-div
+        display: flex
+        flex: 0 0 68.8%
+        flex-direction: column
+        padding: 4rem 6rem
+        background-color: $modal-bg-color
+        .message-title
+            font: 600 19px $main-font
+            color: $content-black
+        .message-alert
+            visibility: hidden
+    .contact-ways
+        display: flex
+        flex: 0 0 31.2%
+        flex-direction: column
+        padding: 4rem 4.6rem
+        background-color: $second-color 
+        .contact-way         
+            line-height: 12px
+            &__title
+                font: 500 15px $main-font
+                color: white
+                margin-bottom: 2rem
+            &__text
+                font: 500 12px $main-font
+                color: white
+                
+
+.message-item
+    width: 240px
+    margin-bottom: 2rem
+.message-label
+    font: 500 14px $main-font
+    color: $main-color
+    visibility: hidden
+.message-input   
+    width: 100%
+    padding: 10px 20px
+    font: 500 16px $main-font
+    color: $second-color
+    background: transparent
+    outline: none!important
+    border: 0
+    border-bottom: 0.25px solid $main-color
+    &::placeholder
+        font: 500 14px $main-font
+        color: $main-color
+
+.message-btn
+    font: 600 16px $main-font
+    color: white
+    background-color: $main-color
+    border: 1px solid $main-color
+    outline: none!important
+    border-radius: 3rem
+    transition: 0.4s ease
+    cursor: pointer
+    &:hover
+        background-color: white
+        color: $main-color
+    
+@media (max-width: 991px)
+    .message-item
+        width: 200px
+
+@media (max-width: 570px)
+    .message-item
+        width: 180px
+
+@media (max-width: 444px)
+    .message-item
+        width: 100%
+
+@media (max-width: 767px)
+    .contact-content
+        height: auto
+        .send-message
+            position: relative
+            margin-top: 3rem
+            margin-bottom: 3rem
+            flex-direction: column
+            .message-div
+                flex: 0 0 100%
+            .contact-ways
+                flex: 0 0 100%

@@ -1,0 +1,73 @@
+extends ../pug_includes/head
+
+block unique-content
+    .container.px-3.position-absolute.nav-wrapper
+        include ../pug_includes/navbar.pug
+    main.main
+        .d-flex.align-items-center.position-relative.top-div
+           .container.p-0.position-absolute.a-x-auto
+            .mx-5
+                .content-title.text-center.mb-3 FAQ
+                .content-motto.text-center
+                    | Lorem Ipsum dolor sit amet
+        .content-body
+            .question.mx-auto.a-x-auto
+                .question__title.mb-2 Send us a Question
+                .question-alert.alert(role="alert")
+                form.question__form.d-flex.flex-wrap.justify-content-around(action="")
+                    .question-item.d-flex.flex-column
+                        label.message-label(for="name") Your Name
+                        input#questionName.message-input(type="text", name="name", placeholder="your name")
+                    .question-item.d-flex.flex-column
+                        label.message-label(for="email") Email Address
+                        input#questionEmail.message-input(type="email", name="email", placeholder="your email")
+                    .w-100.mb-4.d-flex.flex-column
+                        label.message-label(for="question") Email Address
+                        input#yourQuestion.message-input(type="text", name="question", placeholder="your question")
+                    button#questionBtn.message-btn.py-3.my-4.w-100(type="button") SEND
+            .q-title.content-title.text-center.mb-3 QUESTION
+            .q-header.text-center QUESTIONS YOU OFTEN ASK
+            .faq-acc-wrapper.container.px-3.MT-10
+                .faq-acc-item.w-100
+                    .faq-acc-item__header.p-5.d-flex.justify-content-between.align-items-center
+                        .faq-item-title Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                        img(src="./img/icons/circlearrow_down.svg")
+                    .faq-acc-item__body
+                        .faq-acc-text
+                            | Sed aliquam ligula vel facilisis faucibus. Ut in malesuada sem. Suspendisse mollis vestibulum tellus, sit amet eleifend neque sodales ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                            | Sed interdum non orci vitae maximus. Pellentesque tempus ultrices purus in sagittis.      
+                .faq-acc-item.w-100
+                    .faq-acc-item__header.p-5.d-flex.justify-content-between.align-items-center
+                        .faq-item-title Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                        img(src="./img/icons/circlearrow_down.svg")
+                    .faq-acc-item__body
+                        .faq-acc-text
+                            | Sed aliquam ligula vel facilisis faucibus. Ut in malesuada sem. Suspendisse mollis vestibulum tellus, sit amet eleifend neque sodales ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                            | Sed interdum non orci vitae maximus. Pellentesque tempus ultrices purus in sagittis.      
+                .faq-acc-item.w-100
+                    .faq-acc-item__header.p-5.d-flex.justify-content-between.align-items-center
+                        .faq-item-title Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                        img(src="./img/icons/circlearrow_down.svg")
+                    .faq-acc-item__body
+                        .faq-acc-text
+                            | Sed aliquam ligula vel facilisis faucibus. Ut in malesuada sem. Suspendisse mollis vestibulum tellus, sit amet eleifend neque sodales ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                            | Sed interdum non orci vitae maximus. Pellentesque tempus ultrices purus in sagittis.
+                .faq-acc-item.w-100
+                    .faq-acc-item__header.p-5.d-flex.justify-content-between.align-items-center
+                        .faq-item-title Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                        img(src="./img/icons/circlearrow_down.svg")
+                    .faq-acc-item__body
+                        .faq-acc-text
+                            | Sed aliquam ligula vel facilisis faucibus. Ut in malesuada sem. Suspendisse mollis vestibulum tellus, sit amet eleifend neque sodales ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                            | Sed interdum non orci vitae maximus. Pellentesque tempus ultrices purus in sagittis.
+                .faq-acc-item.w-100
+                    .faq-acc-item__header.p-5.d-flex.justify-content-between.align-items-center
+                        .faq-item-title Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                        img(src="./img/icons/circlearrow_down.svg")
+                    .faq-acc-item__body
+                        .faq-acc-text
+                            | Sed aliquam ligula vel facilisis faucibus. Ut in malesuada sem. Suspendisse mollis vestibulum tellus, sit amet eleifend neque sodales ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                            | Sed interdum non orci vitae maximus. Pellentesque tempus ultrices purus in sagittis.      
+                
+    
+    include ../pug_includes/footer.pug

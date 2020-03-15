@@ -1,9 +1,9 @@
 extends ../pug_includes/head
 
 block unique-content
+    .container.px-3.position-absolute.nav-wrapper
+        include ../pug_includes/navbar.pug
     main.main
-        .container.px-3.position-absolute.nav-wrapper
-            include ../pug_includes/navbar.pug
         .d-flex.align-items-center.position-relative.top-div
            .container.p-0.position-absolute.a-x-auto
             .mx-5
@@ -15,41 +15,41 @@ block unique-content
             .portfolio-wrapper.position-relative.d-flex.flex-wrap.mx-auto.MB-10
                 .work-row.w-100
                     a.portfolio-work(href="#")
-                        img(src="../src/img/IMG.png", alt="")
+                        img(src="./img/IMG.png", alt="")
                         .blue-div
                     a.portfolio-work(href="#")
-                        img(src="../src/img/Business-Team-e1401705833531.jpg", alt="")
+                        img(src="./img/Business-Team-e1401705833531.jpg", alt="")
                         .blue-div
                 .work-row.w-100
                     a.portfolio-work(href="#")
-                        img(src="../src/img/370x234.jpg", alt="")
+                        img(src="./img/370x234.jpg", alt="")
                         .blue-div
                     a.portfolio-work(href="#")
-                        img(src="../src/img/IMG.png", alt="")
+                        img(src="./img/IMG.png", alt="")
                         .blue-div
                 .work-row.w-100
                     a.portfolio-work(href="#")
-                        img(src="../src/img/iStock-493325459-2.jpg", alt="")
+                        img(src="./img/iStock-493325459-2.jpg", alt="")
                         .blue-div
                     .portfolio-work
-                        img(src="../src/img/6.jpg", alt="")
-                        .blue-div
-                .work-row.w-100
-                    .portfolio-work
-                        img(src="../src/img/370x234.jpg", alt="")
-                        .blue-div
-                    .portfolio-work
-                        img(src="../src/img/Community835x373.jpg", alt="")
+                        img(src="./img/6.jpg", alt="")
                         .blue-div
                 .work-row.w-100
                     .portfolio-work
-                        img(src="../src/img/iStock-493325459-2.jpg", alt="")
+                        img(src="./img/370x234.jpg", alt="")
                         .blue-div
                     .portfolio-work
-                        img(src="../src/img/Community835x373.jpg", alt="")
+                        img(src="./img/Community835x373.jpg", alt="")
+                        .blue-div
+                .work-row.w-100
+                    .portfolio-work
+                        img(src="./img/iStock-493325459-2.jpg", alt="")
+                        .blue-div
+                    .portfolio-work
+                        img(src="./img/Community835x373.jpg", alt="")
                         .blue-div
                 .show-more.position-absolute.a-x-auto.mx-auto.d-flex.flex-column
-                    img(src="../src/img/icon_scrool_down_white.svg")
+                    img.mx-auto(src="./img/icons/icon_scrool_down_white.svg")
                     span.scroll-text.more scroll to see more
                     span.scroll-text.few.d-none scroll to see few
                     

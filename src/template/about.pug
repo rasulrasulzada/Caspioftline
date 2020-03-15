@@ -1,20 +1,19 @@
 extends ../pug_includes/head
 
 block unique-content
+    .container.px-3.position-absolute.nav-wrapper
+        include ../pug_includes/navbar.pug
     main.main
-        .container.px-3.position-absolute.nav-wrapper
-            include ../pug_includes/navbar.pug
         .d-flex.align-items-center.position-relative
-           img.img-fluid.w-100(b-lazyload='', src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAK6IAAAABCAYAAAD4x33IAAAARUlEQVR42u3BAQEAAAgCIFvedLvQAGCabAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4O9nQAYCNaVRZAAAAAElFTkSuQmCC", data-src="../src/img/about us.jpg")
+           img.img-fluid.w-100(b-lazyload='', src="./img/1170x700-e0e0d57f.png", data-src="./img/about_us_1170x700.jpg")
            .bg-div.position-absolute
-           img.to-down.mx-auto(src="../src/img/icon_scrool_down_white.svg")
            .container.p-0.position-absolute.a-x-auto
             .mx-5
                 .content-title.text-center.mb-3 ABOUT US
                 .content-motto.text-center
                     | MORE LIKE A FAMILY
-                a.d-block.max-w-20.mx-auto.btn.content-btn.text-black.mt-4(href="#") JOIN US        
-        #main-content.container
+                a.d-block.max-w-20.mx-auto.btn.content-btn.content-btn--white.mt-4(href="#") JOIN US       
+        #main-content.container.px-3
             .about-team.MT-10.MB-10
                 .content-header
                     | ABOUT OUR TEAM
@@ -31,63 +30,63 @@ block unique-content
         .my-slider.my-slider-area.d-flex.align-items-center
             .my-slider__item
                 .member-img
-                    img(src="../src/img/WA0000-235x300.jpg" alt="Team Member")
+                    img(src="./img/WA0000-235x300.jpg" alt="Team Member")
                 .member-name.text-center.mb-3 Stanley Russell
                 .member-profession.mb-3.text-center Developer
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .myslider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
             .my-slider__item
                 .member-img
-                    img(src="../src/img/img_avatar3.png" alt="Team Member")
+                    img(src="./img/img_avatar3.png" alt="Team Member")
                 .member-name.text-center.mb-2 Stanley Russell
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3

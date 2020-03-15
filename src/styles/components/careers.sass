@@ -1,0 +1,94 @@
+.careers-content
+    max-width: 1400px
+    padding-top: 10rem
+    .bg-img
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+
+.accordion-item
+    &__header
+        padding: 2rem 3rem
+        cursor: pointer
+        background-color: white
+        border-bottom: 1px solid $main-color
+        transition: 0.4s ease
+        span 
+            font: 700 12px $main-font
+            color: $second-color
+    &__body
+        max-height: 0
+        background-color: transparent
+        overflow: hidden
+        transition: 0.4s ease
+        .career-contact
+            padding: 6rem 3rem 0 3rem
+            .career-contact-link
+                font: 500 12px $main-font
+                color: $content-black
+                img
+        .accordion-content
+            padding: 1rem 3rem 3rem 3rem
+            .accordion-text
+                font: 400 16px $main-font
+                color: $content-black
+                line-height: 26px
+                padding-right: 25rem
+            .accordion-btns
+                align-items: flex-end
+                .upload-btn
+                    display: flex
+                    align-items: center
+                    font: 700 1.5rem $main-font
+                    color: $second-color
+                    background-color: white
+                    border-radius: 3rem
+                    padding: 1.4rem 5rem
+                    cursor: pointer
+                    border: 1px solid $main-color	
+                    outline: none!important
+                    transition: 0.4s ease
+                    &:hover
+                        background-color: $main-color
+                        color: white
+                .accordion-btn
+                    font: 600 16px $main-font
+                    color: white
+                    background-color: $main-color
+                    width: 19.8rem
+                    height: 6rem
+                    border-radius: 3rem
+                    outline: none!important
+                    border: 1px solid $main-color
+                    cursor: pointer
+                    transition: 0.4s ease
+                    &:hover
+                        background-color: white
+                        color: $main-color
+
+.accordion-item--active
+    .accordion-item__header
+        border-color: white
+
+.more-career
+    img
+        width: 40px
+        height: 20px
+        cursor: pointer
+
+.more-career-text
+    font: 400 16px $main-font
+    color: $content-black
+    text-align: center
+
+@media (max-width: 768px)
+    .accordion-item
+        &__body
+            .accordion-content
+                flex-direction: column
+                .accordion-text
+                    padding-right: 0
+                .accordion-btns
+                    form
+                        display: flex
