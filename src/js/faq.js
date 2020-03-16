@@ -42,27 +42,32 @@ const  questionAlert = (alerType,alertMessage) => {
 
 const handleQuestionForm = () => {
   const sendBtn = document.getElementById("questionBtn");
+  if(sendBtn) {
+    
     sendBtn.addEventListener("click", () => {
-        const name = document.getElementById("questionName").value.trim();
-        const email = document.getElementById("questionEmail").value.trim();
-        const question = document.getElementById("yourQuestion").value.trim();
+      const name = document.getElementById("questionName").value.trim();
+      const email = document.getElementById("questionEmail").value.trim();
+      const question = document.getElementById("yourQuestion").value.trim();
 
-        if(name === "" || email === "" || question === "") {
-          questionAlert("alert-danger","Please fill all inputs!");
-        }  else {
-            const data = {name,email,question};
-            console.log(data)//POST
+      if(name === "" || email === "" || question === "") {
+        questionAlert("alert-danger","Please fill all inputs!");
+      }  else {
+          const data = {name,email,question};
+          console.log(data)//POST
 
-            questionAlert("alert-success", "Your question was successfully sent");
+          questionAlert("alert-success", "Your question was successfully sent");
 
-            //Clear Inputs
-            document.getElementById("questionName").value = "";
-            document.getElementById("questionEmail").value = "";
-            document.getElementById("yourQuestion").value = "";
+          //Clear Inputs
+          document.getElementById("questionName").value = "";
+          document.getElementById("questionEmail").value = "";
+          document.getElementById("yourQuestion").value = "";
 
-        }
-       
-    })
+      }
+     
+  })
+
+  }
+    
 }
 
 export {faqAcc,handleQuestionForm}

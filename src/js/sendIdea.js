@@ -50,11 +50,19 @@ const sendIdea = () => {
 const ideaForm = () => {
     
     $('.idea-input').on('focus', (e) => {
-        $(e.target).prev().addClass("invisible");
+        $(e.target).prev().addClass("visible");
     }); 
 
     $('.idea-input').on('blur', (e) => {
-        $(e.target).prev().removeClass("invisible");
+        $(e.target).prev().removeClass("visible");
+    }); 
+
+    $('#number.idea-input').on('focus', (e) => {
+        $(e.target).parent().prev().addClass("visible");
+    }); 
+
+    $('#number.idea-input').on('blur', (e) => {
+        $(e.target).parent().prev().removeClass("visible");
     }); 
 }
 export {sendIdea,ideaForm};
