@@ -19,7 +19,32 @@
     &__form
         .question-item
             width: 240px
+            height: 60px
             margin-bottom: 2rem
+            position: relative
+
+.faq-label
+    font: 500 14px $main-font
+    color: $main-color
+    position: absolute
+    top: 0
+    padding: 10px 20px
+    transition: all 0.4s ease
+.faq-input
+    width: 100%
+    padding: 10px 20px
+    font: 500 16px $main-font
+    color: $second-color
+    background: transparent
+    outline: none!important
+    border: 0
+    border-bottom: 0.25px solid $main-color
+    &:valid + label
+        top: -50%
+        padding-left: 0
+    &:focus + label
+        top: -50%
+        padding-left: 0
 
 .q-title
     font: 600 1.6rem $main-font

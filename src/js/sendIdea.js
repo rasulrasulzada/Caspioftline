@@ -48,21 +48,26 @@ const sendIdea = () => {
 }
 
 const ideaForm = () => {
-    
-    $('.idea-input').on('focus', (e) => {
-        $(e.target).prev().addClass("visible");
-    }); 
-
-    $('.idea-input').on('blur', (e) => {
-        $(e.target).prev().removeClass("visible");
-    }); 
-
-    $('#number.idea-input').on('focus', (e) => {
-        $(e.target).parent().prev().addClass("visible");
+    $('#email.idea-input').on('blur', (e) => {
+        const email = $("#email.idea-input").val().trim();
+        if (email) {
+            $("#email.idea-input").parent().addClass("email-item-active");
+        } else {
+            $("#email.idea-input").parent().removeClass("email-item-active");
+        }
     }); 
 
     $('#number.idea-input').on('blur', (e) => {
-        $(e.target).parent().prev().removeClass("visible");
+        const number = $("#number.idea-input").val().trim();
+        if (number) {
+            $("#number.idea-input").parent().addClass("idea-item--active");
+        } else {
+            $("#number.idea-input").parent().removeClass("idea-item--active");
+        }
     }); 
+    
+
+
+    
 }
 export {sendIdea,ideaForm};

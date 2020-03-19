@@ -1,3 +1,15 @@
+const inputFaqFocus = () => {
+  $('#questionEmail.faq-input').on('blur', (e) => {
+      const email = $("#questionEmail.faq-input").val().trim();
+      if (email) {
+          $("#questionEmail.faq-input").parent().addClass("email-item-active");
+      } else {
+          $("#questionEmail.faq-input").parent().removeClass("email-item-active");
+      }
+  }); 
+   
+}
+
 const faqAcc = () => {
 
     const acc = document.getElementsByClassName("faq-acc-item__header");
@@ -70,4 +82,4 @@ const handleQuestionForm = () => {
     
 }
 
-export {faqAcc,handleQuestionForm}
+export {inputFaqFocus,faqAcc,handleQuestionForm}

@@ -31,16 +31,32 @@ const careersAccordion = () => {
 
 }
 
+const fileInput = () => {
+  const fileInputs = document.querySelectorAll("input[type=file]");
+  for (let elem of fileInputs) {
+    elem.addEventListener("change", function(e) {
+      if(elem.files.length >= 1) {
+        elem.previousElementSibling.classList.add("visible")
+      } else {
+        elem.previousElementSibling.classList.remove("visible")
+      }
+      
+    })
+  }
+}
+
 const scrollCareers = () => {
 
-  $(".accordion-item:gt(2)").addClass("d-none");
+  window.addEventListener("scroll", () => {
+    const winScroll = window.scrollY;
+    const elems = document.getElementsByClassName("accordion-item")
+    const lastElemPos = elems[elems.length - 1].offsetTop;
+    if(winScroll >= lastElemPos + 300) {
+      $(".more-career img").addClass("rotate-arrow");
+    } else {
+      $(".more-career img").removeClass("rotate-arrow");
+    }
+  })
 
-  $(".more-career img").click(() => {
-    $(".accordion-item:gt(2)").toggleClass("d-none");
-    $(".more-career img").toggleClass("rotate-arrow");
-    $(".more-career-text.more").toggleClass("d-none");
-    $(".more-career-text.few").toggleClass("d-none")
-
-  });
 };
-export {careersAccordion,scrollCareers}
+export {careersAccordion,fileInput,scrollCareers}

@@ -14,43 +14,44 @@ block unique-content
             .send-message.container.px-3.mx-auto.a-x-auto.d-flex
                 .message-div
                     .message-title.mb-2 Send us a Message
-                    .message-alert.alert(role="alert")
+                    .message-alert.alert.mb-5(role="alert")
                     form.mt-2(action="")
                         .d-flex.flex-wrap.justify-content-between.mb-5
-                            .message-item.d-flex.flex-column
-                                label.message-label(for="name") Your Name
-                                input#yourName.message-input(type="text", name="name", placeholder="adiniz...")
-                            .message-item.d-flex.flex-column
-                                label.message-label(for="surname") Your Surname
-                                input#yourSurname.message-input(type="text", name="surname", placeholder="soyadiniz...")
-                            .message-item.d-flex.flex-column
-                                label.message-label(for="email") Email Address
-                                input#yourEmail.message-input(type="email", name="email", placeholder="emailiniz...")
-                            .message-item.d-flex.flex-column
-                                label.message-label(for="subject") Subject
-                                input#yourSubject.message-input(type="text", name="subject", placeholder="movzu...")
-                            .w-100.d-flex.flex-column
-                                label.message-label(for="message") Your Message
-                                input#yourMessage.message-input(type="text", name="message", placeholder="mesajiniz...")
-                        button#messageBtn.message-btn.py-3.mt-3.w-100(type="button") SEND
+                            .message-item.d-flex.flex-column                              
+                                input#yourName.message-input(type="text", required="", name="name")
+                                label.message-label(for="yourName") Your Name
+                            .message-item.d-flex.flex-column                               
+                                input#yourSurname.message-input(type="text", required="", name="surname")
+                                label.message-label(for="yourSurname") Your Surname
+                            .message-item.d-flex.flex-column                                
+                                input#yourEmail.message-input(type="email", required="", name="email")
+                                label.message-label(for="yourEmail") Email Address
+                            .message-item.d-flex.flex-column                               
+                                input#yourSubject.message-input(type="text", required="", name="subject")
+                                label.message-label(for="yourSubject") Subject
+                            .w-100.mb-5.position-relative.d-flex.flex-column                              
+                                input#yourMessage.message-input(type="text", required="", name="message")
+                                label.message-label(for="yourMessage") Your Message
+                        button#messageBtn.message-btn.py-3.mt-3.w-100(type="submit") SEND
                 .contact-ways
                     .contact-way.mt-3.mb-5
-                        img.mb-5(src="./img/icons/location_white.svg") 
+                        img.mb-5.location-icon(src="./img/icons/location_white.svg") 
                         .contact-way__title Our Location
-                        .contact-way__text
+                        .contact-way__text.mb-3
                             | 809 McDermott Drive Apt. 073
+                        .contact-way__text.mb-3
                             | 3401 Hintz Estate Suite 126  
                     .contact-way.mt-3.mb-5
-                        img.mb-5(src="./img/icons/mail_white.svg")
+                        img.mb-5.mail-icon(src="./img/icons/mail_white.svg")
                         .contact-way__title Contact With Mail
-                        a.contact-way__text.d-block(href="mailto:lavon_tromp@yahoo.com") lavon_tromp@yahoo.com
-                        a.contact-way__text.d-block(href="mailto:korey.hirthe@yahoo.com") korey.hirthe@yahoo.com
-                        a.contact-way__text.d-block(href="mailto:mayert.norbert@esteban.us") mayert.norbert@esteban.us
+                        a.contact-way__text.mb-3.d-block(href="mailto:lavon_tromp@yahoo.com") lavon_tromp@yahoo.com
+                        a.contact-way__text.mb-3.d-block(href="mailto:korey.hirthe@yahoo.com") korey.hirthe@yahoo.com
+                        a.contact-way__text.mb-3.d-block(href="mailto:mayert.norbert@esteban.us") mayert.norbert@esteban.us
                     .contact-way
-                        img.mb-5(src="./img/icons/call_white.svg") 
+                        img.mb-5.call-icon(src="./img/icons/call_white.svg") 
                         .contact-way__title Telephone
-                        a.contact-way__text.d-block(href="tel:809-131-9709") 809-131-9709
-                        a.contact-way__text.d-block(href="tel:842-267-7205") 842-267-7205
-                        a.contact-way__text.d-block(href="tel:653-070-7430") 653-070-7430                         
+                        a.contact-way__text.mb-3.d-block(href="tel:809-131-9709") 809-131-9709
+                        a.contact-way__text.mb-3.d-block(href="tel:842-267-7205") 842-267-7205
+                        a.contact-way__text.mb-3.d-block(href="tel:653-070-7430") 653-070-7430                         
     
     include ../pug_includes/footer.pug

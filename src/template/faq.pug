@@ -13,18 +13,18 @@ block unique-content
         .content-body.mx-auto
             .question.mx-auto.a-x-auto
                 .question__title.mb-2 Send us a Question
-                .question-alert.alert(role="alert")
-                form.question__form.d-flex.flex-wrap.justify-content-around(action="")
-                    .question-item.d-flex.flex-column
-                        label.message-label(for="name") Your Name
-                        input#questionName.message-input(type="text", name="name", placeholder="your name")
-                    .question-item.d-flex.flex-column
-                        label.message-label(for="email") Email Address
-                        input#questionEmail.message-input(type="email", name="email", placeholder="your email")
-                    .w-100.mb-4.d-flex.flex-column
-                        label.message-label(for="question") Email Address
-                        input#yourQuestion.message-input(type="text", name="question", placeholder="your question")
-                    button#questionBtn.message-btn.py-3.my-4.w-100(type="button") SEND
+                .question-alert.alert.mb-5(role="alert")
+                form.question__form.d-flex.flex-wrap.justify-content-between(action="")
+                    .question-item.d-flex.flex-column                
+                        input#questionName.faq-input(type="text", required="", name="name")
+                        label.faq-label(for="questionName") Your Name
+                    .question-item.d-flex.flex-column                        
+                        input#questionEmail.faq-input(type="email", required="", name="email")
+                        label.faq-label(for="questionEmail") Email Address
+                    .w-100.mb-4.position-relative.d-flex.flex-column
+                        input#yourQuestion.faq-input(type="text", required="", name="question")
+                        label.faq-label(for="yourQuestion") Your Question
+                    button#questionBtn.message-btn.py-3.my-4.w-100(type="submit") SEND
             .q-title.content-title.text-center.mb-3 QUESTION
             .q-header.text-center QUESTIONS YOU OFTEN ASK
             .faq-acc-wrapper.container.px-3.MT-10

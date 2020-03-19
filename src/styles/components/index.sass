@@ -15,6 +15,8 @@
     &__content
         padding: 4rem 6rem
         background-color: $modal-bg-color
+        .my-modal-header
+            border: 0
     &__title
         font: 600 18px $main-font
         // margin-bottom: 4rem
@@ -29,13 +31,34 @@
     outline: none!important
     span
         cursor: pointer!important
+        font-size: 30px
 .form-item
     width: 24rem
     margin-bottom: 2rem
+    position: relative
+    height: 60px
 .idea-label
     font: 500 14px $main-font
     color: $main-color
-    visibility: hidden
+    position: absolute
+    top: 0
+    left: 0
+    padding: 10px 20px
+    transition: all 0.4s ease
+
+.number-label.idea-label
+    margin-left: 7rem
+
+.idea-item--active
+    .number-label.idea-label
+        left: 0!important
+        top: -50%
+        margin-left: 0
+
+#number.idea-input:focus + .number-label.idea-label
+    left: 0!important
+    margin-left: 0
+
 .idea-input
     width: 100%
     padding: 1rem 2rem
@@ -45,15 +68,18 @@
     border-bottom: 1px solid #1E60A0
     outline: none!important
     background-color: transparent
-    &::placeholder
-        font: 500 14px $main-font
-        color: $main-color
+    &:valid + label
+        top: -50%
+        padding-left: 0
+    &:focus + label
+        top: -50%
+        padding-left: 0
+
 .form-select
     width: auto
 .form-column
-    width: 1px
     height: 20px
-    border: 1px solid #1E60A0
+    border: 0.5px solid #1E60A0
 .number-input
     width: calc(100% - 67px)!important
 .idea-modal-btn

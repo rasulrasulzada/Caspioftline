@@ -40,18 +40,36 @@
                 font: 500 15px $main-font
                 color: white
                 margin-bottom: 2rem
+                line-height: 12px
             &__text
                 font: 500 12px $main-font
                 color: white
+                line-height: 12px
                 
+.location-icon
+    width: 20px
+    height: 29px
+.mail-icon
+    width: 31px
+    height: 24px
+.call-icon
+    widows: 27px
+    height: 24px
 
 .message-item
     width: 240px
+    height: 60px
     margin-bottom: 2rem
+    position: relative
 .message-label
     font: 500 14px $main-font
     color: $main-color
-    visibility: hidden
+    position: absolute
+    top: 0
+    padding: 10px 20px
+    transition: all 0.4s ease
+
+
 .message-input   
     width: 100%
     padding: 10px 20px
@@ -61,9 +79,21 @@
     outline: none!important
     border: 0
     border-bottom: 0.25px solid $main-color
-    &::placeholder
-        font: 500 14px $main-font
-        color: $main-color
+    &:valid + label
+        top: -50%
+        padding-left: 0
+    &:focus + label
+        top: -50%
+        padding-left: 0
+
+.email-item-active
+    label 
+        top: -50%
+        padding-left: 0
+
+
+
+        
 
 .message-btn
     font: 600 16px $main-font

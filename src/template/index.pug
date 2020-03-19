@@ -5,7 +5,7 @@ block unique-content
         include ../pug_includes/navbar.pug
     main.main
         .d-flex.align-items-center.position-relative
-           img.img-fluid.w-100(b-lazyload='', src="./img/1170x700-e0e0d57f.png", data-src="./img/home_slide.jpg")
+           .img-div(style="background-image: url('./img/home_slide_1170x700.jpg')")
            img.to-down.mx-auto(src="./img/icons/icon_scrool_down_white.svg")
            .container.p-0.position-absolute.a-x-auto
             .idea
@@ -15,36 +15,36 @@ block unique-content
                 button.btn.content-btn.text-black.mt-4(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
                 #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                     .modal-dialog.mx-auto.idea-modal(role='document')                      
-                        .modal-content.mx-auto.mt-5.idea-modal__content
+                        .modal-content.h-100.mx-auto.mt-5.idea-modal__content
                             button.close.custom-close(type='button', data-dismiss='modal', aria-label='Close')
                                 span(aria-hidden='true') &times;
-                            .modal-header.p-0
+                            .modal-header.p-0.my-modal-header
                                 .idea-modal__title Send Your Idea    
                             .alert.modal-alert(role="alert")
                             form(action="")
                                 .d-flex.flex-wrap.justify-content-around
-                                    .form-item
+                                    .form-item                                    
+                                        input#name.idea-input(type="text", name="name",required="")
                                         label.idea-label(for="name") Your Name
-                                        input#name.idea-input(type="text", name="name",placeholder="name")
-                                    .form-item
+                                    .form-item                                      
+                                        input#surname.idea-input(type="text", name="surname", required="")
                                         label.idea-label(for="surname") Your Surname
-                                        input#surname.idea-input(type="text", name="surname", placeholder="surname")
-                                    .form-item
+                                    .form-item                  
+                                        input#email.idea-input(type="email", name="email", required="")
                                         label.idea-label(for="email") Your Email
-                                        input#email.idea-input(type="email", name="email",placeholder="email")
-                                    .form-item
-                                        label.idea-label(for="") Your Number
+                                    .form-item                                      
                                         .d-flex.w-100
                                             select#selectLand.idea-input.form-select.pr-0.pb-0(name="")
                                                 option AZ
                                                 option EN
                                                 option RU
                                             .form-column.my-3
-                                            input#number.idea-input.pl-4.number-input(type="number",max="9")
-                                .form-item.w-100
-                                    label.idea-label(for="yourIdea") Your Idea
-                                    textarea#idea.w-100.idea-input(name="yourIdea", rows="7", placeholder="Write your idea...")
-                                button#sendBtn.w-100.idea-modal-btn(type="button") SEND
+                                            input#number.idea-input.pl-4.number-input(type="number",max="9", required="")
+                                            label.number-label.idea-label.text-nowrap(for="number") Your Number
+                                .form-item.w-100                   
+                                    textarea#idea.w-100.idea-input(name="yourIdea", rows="7", required="")
+                                    label.idea-label(for="idea") Your Idea
+                                button#sendBtn.w-100.idea-modal-btn(type="submit") SEND
         #main-content.container
             .content-header.MT-10
                 | TALENT & SERVICES FOR THE EXTENDED WORKFORCE.

@@ -1,11 +1,13 @@
-const inputFocus = () => {
-    $('.message-input').on('focus', (e) => {
-        $(e.target).prev().addClass("visible");
+const inputContactFocus = () => {
+    $('#yourEmail.message-input').on('blur', (e) => {
+        const email = $("#yourEmail.message-input").val().trim();
+        if (email) {
+            $("#yourEmail.message-input").parent().addClass("email-item-active");
+        } else {
+            $("#yourEmail.message-input").parent().removeClass("email-item-active");
+        }
     }); 
-
-    $('.message-input').on('blur', (e) => {
-        $(e.target).prev().removeClass("visible");
-    }); 
+     
 }
 
 const  messageAlert = (alerType,alertMessage) => {
@@ -54,4 +56,4 @@ const handleMessageForm = () => {
     
     
 }
-export {inputFocus,handleMessageForm}
+export {inputContactFocus,handleMessageForm}

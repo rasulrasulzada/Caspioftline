@@ -5,7 +5,7 @@ block unique-content
         include ../pug_includes/navbar.pug
     main.main
         .d-flex.align-items-center.position-relative
-           img.img-fluid.w-100(b-lazyload='', src="./img/1170x700-e0e0d57f.png", data-src="./img/about_us_1170x700.jpg")
+           .img-div(style="background-image: url('./img/about_us_1170x700.jpg')")
            .bg-div.position-absolute
            .container.p-0.position-absolute.a-x-auto
             .mx-5
@@ -15,7 +15,7 @@ block unique-content
                 a.d-block.max-w-20.mx-auto.btn.content-btn.content-btn--white.mt-4(href="#") JOIN US       
         #main-content.container.px-3
             .about-team.MT-10.MB-10
-                .content-header
+                .content-header.mb-3
                     | ABOUT OUR TEAM
                 .content-text
                     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id sem semper, commodo nisi vel, convallis purus. Sed id nunc aliquet, ornare ex in, sodales leo. Phasellus et tempus nisl. Sed ac dolor tempus, lacinia tellus eget, laoreet diam. In vestibulum cursus porta. Mauris suscipit justo et nisl vehicula, eu mollis mauris finibus. Mauris laoreet tellus at ligula iaculis semper ac faucibus ipsum. Aenean in urna massa. Vestibulum finibus augue enim, id lobortis ante pellentesque sit amet. Sed quis feugiat ante. Vestibulum euismod dolor et cursus viverra. Nunc lectus lacus, convallis nec nisi non, elementum consequat mi. Duis fermentum diam eu fermentum tincidunt. 
@@ -27,7 +27,7 @@ block unique-content
                     | MORE LIKE A FAMILY
                 .content-title.content-title--blue.text-center
                     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in elit purus.
-        .my-slider.my-slider-area.d-flex.align-items-center
+        .my-slider.my-slider-area.d-flex.align-items-center.MB-10
             .my-slider__item
                 .member-img
                     img(src="./img/WA0000-235x300.jpg" alt="Team Member")
@@ -91,6 +91,14 @@ block unique-content
                 .member-profession.text-center.mb-3 Marketolog
                 .blue-line.mx-auto.mb-3
                 a.d-block.mx-auto.linkedin.mb-3(href="#")
+        .container.MB-15
+            .content-title.content-title--blue.text-center
+                | PROCESS
+            .content-header
+                | ABOUT WORKING HERE
+            .content-text
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id sem semper, commodo nisi vel, convallis purus. Sed id nunc aliquet, ornare ex in, sodales leo. Phasellus et tempus nisl. Sed ac dolor tempus, lacinia tellus eget, laoreet diam. In vestibulum cursus porta. Mauris suscipit justo et nisl vehicula, eu mollis mauris finibus. Mauris laoreet tellus at ligula iaculis semper ac faucibus ipsum. Aenean in urna massa. Vestibulum finibus augue enim, id lobortis ante pellentesque sit amet. Sed quis feugiat ante. Vestibulum euismod dolor et cursus viverra. Nunc lectus lacus, convallis nec nisi non, elementum consequat mi. 
+                | Duis fermentum diam eu fermentum tincidunt. Curabitur malesuada malesuada dictum. Sed in lobortis sem.
 
       
     include ../pug_includes/footer.pug

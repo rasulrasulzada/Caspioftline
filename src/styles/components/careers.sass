@@ -7,6 +7,14 @@
         left: 0
         z-index: -1
 
+.img-div
+    width: 100%
+    height: 70rem
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+   
 .accordion-item
     &__header
         padding: 2rem 3rem
@@ -38,6 +46,7 @@
             .accordion-btns
                 align-items: flex-end
                 .upload-btn
+                    position: relative
                     display: flex
                     align-items: center
                     font: 700 1.5rem $main-font
@@ -52,6 +61,12 @@
                     &:hover
                         background-color: $main-color
                         color: white
+                    i
+                        font-size: 15px
+                        position: absolute
+                        right: 12px
+                        transition: all 0.4s
+                        visibility: hidden
                 .accordion-btn
                     font: 600 16px $main-font
                     color: white
