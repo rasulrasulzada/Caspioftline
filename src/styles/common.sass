@@ -87,7 +87,25 @@
 	&:hover
 		color: $main-color
 
+.img-div
+    width: 100%
+    height: 70rem
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+@media (max-width: 991px)
+	.img-div
+		background-attachment: scroll
+		height: 60rem
+@media (max-width: 575px)
+	.img-div
+		height: 45rem
+
 @media (max-width: 420px)
+	.img-div
+		height: 36rem
+		
 	.content-motto
 		font-size: 3.5rem
 	.content-btn

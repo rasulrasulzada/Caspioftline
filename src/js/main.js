@@ -2,7 +2,6 @@ import "../styles/main.sass"
 
 'use strict'
 import {ableSearch, disableSearch,toggleNav,toDown} from './homepage'
-import accordionFunc from './accordion';
 import lazyload from "./lazyload"
 import {sendIdea,ideaForm} from "./sendIdea"
 import slickSlider from "./slickSlider"
@@ -36,7 +35,6 @@ lazyload()
 
  inputContactFocus();
  handleMessageForm();
-// accordionFunc();
 
  
 });

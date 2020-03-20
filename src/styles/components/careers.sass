@@ -1,5 +1,5 @@
 .careers-content
-    max-width: 1400px
+    max-width: 1600px
     padding-top: 10rem
     .bg-img
         position: absolute
@@ -7,13 +7,6 @@
         left: 0
         z-index: -1
 
-.img-div
-    width: 100%
-    height: 70rem
-    background-attachment: fixed
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center
    
 .accordion-item
     &__header
@@ -87,6 +80,10 @@
         border-color: white
 
 .more-career
+    display: flex
+    flex-direction: column
+    position: fixed
+    bottom: 3.5rem
     img
         width: 40px
         height: 20px
@@ -96,6 +93,12 @@
     font: 400 16px $main-font
     color: $content-black
     text-align: center
+
+.absolute-career-icon
+    position: absolute
+    bottom: -30px
+    .more-career-text
+        display: none
 
 @media (max-width: 768px)
     .accordion-item

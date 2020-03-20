@@ -15,11 +15,12 @@ const sendIdea = () => {
         const surname = $("#surname").val().trim();
         const email = $("#email").val().trim();
         const idea = $("#idea").val().trim();    
+        const ideaTitle = $("#idea-title").val().trim();    
         const number = $("#number").val().trim();
         const sel = document.querySelector("#selectLand");
         const land = sel.options[sel.selectedIndex].value;
 
-        if(name === "" || surname === "" || email === "" || number === "" || idea === "") {
+        if(name === "" || surname === "" || email === "" || number === "" || ideaTitle === "" || idea === "") {
             ideaAlert("alert-danger", "Please fill all inputs!")
         }  else {
             const data = {
@@ -27,6 +28,7 @@ const sendIdea = () => {
                 surname,
                 email,
                 number: land + number,
+                ideaTitle,
                 idea
             }
             console.log(data)//POST

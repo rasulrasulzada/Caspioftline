@@ -47,16 +47,33 @@ const fileInput = () => {
 
 const scrollCareers = () => {
 
-  window.addEventListener("scroll", () => {
-    const winScroll = window.scrollY;
-    const elems = document.getElementsByClassName("accordion-item")
-    const lastElemPos = elems[elems.length - 1].offsetTop;
-    if(winScroll >= lastElemPos + 300) {
-      $(".more-career img").addClass("rotate-arrow");
-    } else {
-      $(".more-career img").removeClass("rotate-arrow");
-    }
-  })
+  if(document.getElementById("careersAccordion")) {
+
+
+    const accElems = document.getElementsByClassName("accordion-item")
+    const lastAccElemPos = accElems[accElems.length - 1].offsetTop;
+    // const lastH = accElems[accElems.length - 1].offsetHeight;
+    // if((lastAccElemPos + lastH) >= window.scrollY) {
+    //   $(".more-career").addClass("d-none")
+    //   console.log("BIG")
+    // } else {
+    //   console.log("NORMAL")
+    // }
+
+    window.addEventListener("scroll", () => {
+      const winScroll = window.scrollY;
+      
+        if(winScroll >= lastAccElemPos - 120) {
+          $(".more-career").addClass("absolute-career-icon");
+          $(".more-career img").addClass("rotate-arrow");
+        } else {
+          $(".more-career").removeClass("absolute-career-icon");
+          $(".more-career img").removeClass("rotate-arrow");
+        }
+    })
+
+  }
+  
 
 };
 export {careersAccordion,fileInput,scrollCareers}

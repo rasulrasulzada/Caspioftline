@@ -16,12 +16,12 @@ block unique-content
                 #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                     .modal-dialog.mx-auto.idea-modal(role='document')                      
                         .modal-content.h-100.mx-auto.mt-5.idea-modal__content
-                            button.close.custom-close(type='button', data-dismiss='modal', aria-label='Close')
+                            button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
                                 span(aria-hidden='true') &times;
                             .modal-header.p-0.my-modal-header
                                 .idea-modal__title Send Your Idea    
                             .alert.modal-alert(role="alert")
-                            form(action="")
+                            form.mt-3(action="")
                                 .d-flex.flex-wrap.justify-content-around
                                     .form-item                                    
                                         input#name.idea-input(type="text", name="name",required="")
@@ -41,7 +41,10 @@ block unique-content
                                             .form-column.my-3
                                             input#number.idea-input.pl-4.number-input(type="number",max="9", required="")
                                             label.number-label.idea-label.text-nowrap(for="number") Your Number
-                                .form-item.w-100                   
+                                .idea-title-div.w-100
+                                    input#idea-title.idea-input(type="text", name="idea-title", required="")
+                                    label.idea-label(for="idea-title") Idea Title
+                                .idea-textarea.w-100                   
                                     textarea#idea.w-100.idea-input(name="yourIdea", rows="7", required="")
                                     label.idea-label(for="idea") Your Idea
                                 button#sendBtn.w-100.idea-modal-btn(type="submit") SEND
@@ -99,5 +102,6 @@ block unique-content
                         | Let`s create a new future together
                     a.content-btn.btn-white.d-inline-block.mt-4(href="") EXPLORE
             .careers__content
-                img(src="./img/home_careers,Careers.jpg")
+                //- img(src="./img/home_careers,Careers.jpg")
+                .img-div(style="background-image: url('./img/home_careers,Careers.jpg');")
     include ../pug_includes/footer.pug
