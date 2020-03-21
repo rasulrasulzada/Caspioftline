@@ -22,7 +22,7 @@ block unique-content
                         input#questionEmail.faq-input(type="email", required="", name="email")
                         label.faq-label(for="questionEmail") Email Address
                     .w-100.mb-4.position-relative.d-flex.flex-column
-                        input#yourQuestion.faq-input(type="text", required="", name="question")
+                        textarea#yourQuestion.faq-input(name="question", required="", cols="30", rows="4")
                         label.faq-label(for="yourQuestion") Your Question
                     button#questionBtn.message-btn.py-3.my-4.w-100(type="submit") SEND
             .q-title.content-title.text-center.mb-3 QUESTION

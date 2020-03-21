@@ -30,7 +30,7 @@ block unique-content
                                 input#yourSubject.message-input(type="text", required="", name="subject")
                                 label.message-label(for="yourSubject") Subject
                             .w-100.mb-5.position-relative.d-flex.flex-column                              
-                                input#yourMessage.message-input(type="text", required="", name="message")
+                                textarea#yourMessage.message-input(name="message", required="", cols="30", rows="4")
                                 label.message-label(for="yourMessage") Your Message
                         button#messageBtn.message-btn.py-3.mt-3.w-100(type="submit") SEND
                 .contact-ways

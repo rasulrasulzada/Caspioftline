@@ -64,18 +64,15 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        use: 'pug-loader'
+        loader: "pug-loader",
+        query: {
+          pretty: true //this stops to minify html
+        }
       },
     ]
   },
   plugins: [
     new CleanWebpackPlugin(),
-    // new HtmlWebpackPlugin({
-    //   template: "./src/template/index.pug",
-    //   filename: "index.html",
-    //   inject: true
-    //   // inject: true => Otomatik olarak build dosyasını script tag'ı olarak eklemeyi sağlar.
-    // }),
     new MiniCssExtractPlugin({
       filename: "styles.min.css"
     }),

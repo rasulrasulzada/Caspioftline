@@ -52,13 +52,15 @@ const scrollCareers = () => {
 
     const accElems = document.getElementsByClassName("accordion-item")
     const lastAccElemPos = accElems[accElems.length - 1].offsetTop;
-    // const lastH = accElems[accElems.length - 1].offsetHeight;
-    // if((lastAccElemPos + lastH) >= window.scrollY) {
-    //   $(".more-career").addClass("d-none")
-    //   console.log("BIG")
-    // } else {
-    //   console.log("NORMAL")
-    // }
+    const lastAccElemHeight = accElems[accElems.length - 1].offsetHeight;
+    console.log("window.innerHeight: " + window.innerHeight)
+    if(window.innerHeight >= (lastAccElemPos + lastAccElemHeight) * 2) {
+      $(".more-career").addClass("d-none")
+      console.log("BIG")
+    } else {
+      $(".more-career").removeClass("d-none")
+      console.log("NORMAL")
+    }
 
     window.addEventListener("scroll", () => {
       const winScroll = window.scrollY;
