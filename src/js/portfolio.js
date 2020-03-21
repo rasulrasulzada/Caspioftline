@@ -1,18 +1,26 @@
 const scrollPortfolio = () => {
 
   if(document.getElementById("portfolioWrapper")) {
+
+    const accItems = document.getElementsByClassName("work-row")
+    const lastAccItemPos = accItems[accItems.length - 1].offsetTop; 
+    const lastAccItemHeight = accItems[accItems.length - 1].offsetHeight;
+
+    if(window.innerHeight >= (lastAccItemPos + lastAccItemHeight) * 1.5) {
+      $(".show-more").addClass("d-none");
+    } else {
+      $(".show-more").removeClass("d-none");
+    }
+
     window.addEventListener("scroll", () => {
       const winScroll = window.scrollY;
-      const accItems = document.getElementsByClassName("work-row")
-        const lastAccItemPos = accItems[accItems.length - 1].offsetTop; 
-        if(winScroll >= lastAccItemPos) {
-          $(".show-more").addClass("position-absolute");
+     
+        if(winScroll >= lastAccItemPos - 120) {
+          $(".show-more").addClass("absolute-show-more");
           $(".show-more img").addClass("rotate-arrow");
-          $(".scroll-text.more").addClass("d-none");
         } else {
-          $(".show-more").removeClass("position-absolute");
+          $(".show-more").removeClass("absolute-show-more");
           $(".show-more  img").removeClass("rotate-arrow");
-          $(".scroll-text.more").removeClass("d-none");
         }
   
       

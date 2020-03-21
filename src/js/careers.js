@@ -53,13 +53,11 @@ const scrollCareers = () => {
     const accElems = document.getElementsByClassName("accordion-item")
     const lastAccElemPos = accElems[accElems.length - 1].offsetTop;
     const lastAccElemHeight = accElems[accElems.length - 1].offsetHeight;
-    console.log("window.innerHeight: " + window.innerHeight)
+    
     if(window.innerHeight >= (lastAccElemPos + lastAccElemHeight) * 2) {
       $(".more-career").addClass("d-none")
-      console.log("BIG")
     } else {
       $(".more-career").removeClass("d-none")
-      console.log("NORMAL")
     }
 
     window.addEventListener("scroll", () => {

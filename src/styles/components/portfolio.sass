@@ -47,10 +47,18 @@
 .show-more
     position: fixed
     bottom: 3.5rem
+    display: flex
+    flex-direction: column
     img
         width: 40px
         height: 20px
         cursor: pointer
+
+.absolute-show-more
+    position: absolute
+    .scroll-text.more
+        display: none
+
 
 .scroll-text
     font: 400 16px $main-font
