@@ -2,10 +2,9 @@ var path = require("path");
 var { CleanWebpackPlugin } = require("clean-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var fs = require('fs');
+var fs = require('fs')
 var CopyPlugin = require('copy-webpack-plugin');
-
-
+var webpack = require("webpack")
 
 function generateHtmlPlugins (templateDir) {
   // Read files in template directory
@@ -37,7 +36,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: [/.js$/],
+        test: [/.js$/], 
         exclude: /(node_modules)/, 
         use: {
           loader: "babel-loader",
@@ -48,30 +47,31 @@ module.exports = {
       },
       {
         test: [/.css$|.scss$|.sass$/],
-        use: [MiniCssExtractPlugin.loader, "css-loader?url=false", "sass-loader"]
+        use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', "sass-loader"]
       },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: {
-              // minimize: true
-            }
-          }
-        ],
-        exclude: path.resolve(__dirname, "src/index.html")
-      },
+      // {
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       loader: "html-loader",
+      //       options: {
+      //         minimize: true //this minifies html
+      //       }
+      //     }
+      //   ],
+      //   exclude: path.resolve(__dirname, "src/index.html")
+      // },
       {
         test: /\.pug$/,
         loader: "pug-loader",
         query: {
           pretty: true //this stops to minify html
         }
-      },
+      },  
     ]
   },
   plugins: [
+    new webpack.BannerPlugin(fs.readFileSync('./LICENSE', 'utf8')),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "styles.min.css"
