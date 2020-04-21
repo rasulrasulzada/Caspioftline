@@ -16,6 +16,9 @@ block unique-content
                 #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                     .modal-dialog.mx-auto.idea-modal(role='document')                      
                         .modal-content.mx-auto.mt-5.idea-modal__content
+                            .successfull
+                                i.fa.fa-check-circle.mb-5
+                                .text.mt-5 Successfully Sent
                             button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
                                 span(aria-hidden='true') &times;
                             .modal-header.p-0.my-modal-header.mb-3
@@ -25,6 +28,7 @@ block unique-content
                                     select#selectPosition.idea-input.form-select.pr-0.pb-0.w-100(name="")
                                         option Digital Marketolog
                                         option Full-Stack Developer
+                                        option Java Developer
                                         option UX / UI Designer
                                     label.idea-label(for="selectPosition") Your Position
                                 .message-item.w-100.mb-0.d-flex.flex-column

@@ -47,7 +47,17 @@ const fileInput = () => {
 
 const handleCareersForm = () => {
   const careersJoinBtn = document.getElementById("careersJoinBtn")
+
   if (careersJoinBtn) {
+
+    const applyBtns = document.querySelectorAll(".content-btn.apply-btn")
+    for (let btn of  applyBtns) {
+      btn.addEventListener("click", (e) => {
+        const pos = e.target.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.textContent.trim()
+        document.getElementById("selectPosition").value = pos
+      })
+    }
+
     const careersForm = document.getElementById("careersForm")
     careersForm.addEventListener("submit", (e) => {
       e.preventDefault()
@@ -57,8 +67,12 @@ const handleCareersForm = () => {
       const data = {position, email}
 
       console.log(data)//POST
-
-      document.querySelector("button.close").click();
+      document.querySelector(".successfull").classList.add("d-flex")
+      setTimeout(() => {
+        document.querySelector(".successfull").classList.remove("d-flex")
+        document.getElementById("careersEmail").value = ""
+        document.querySelector("button.close").click();
+      }, 700);
     })
 }
   }
