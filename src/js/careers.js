@@ -45,35 +45,23 @@ const fileInput = () => {
   }
 }
 
-const scrollCareers = () => {
+const handleCareersForm = () => {
+  const careersJoinBtn = document.getElementById("careersJoinBtn")
+  if (careersJoinBtn) {
+    const careersForm = document.getElementById("careersForm")
+    careersForm.addEventListener("submit", (e) => {
+      e.preventDefault()
+      const selectPosition = document.getElementById("selectPosition")
+      const position = selectPosition.options[selectPosition.selectedIndex].textContent.trim();
+      const email = document.getElementById("careersEmail").value.trim();
+      const data = {position, email}
 
-  if(document.getElementById("careersAccordion")) {
+      console.log(data)//POST
 
-
-    const accElems = document.getElementsByClassName("accordion-item")
-    const lastAccElemPos = accElems[accElems.length - 1].offsetTop;
-    const lastAccElemHeight = accElems[accElems.length - 1].offsetHeight;
-    
-    if(window.innerHeight >= (lastAccElemPos + lastAccElemHeight) * 2) {
-      $(".more-career").addClass("d-none")
-    } else {
-      $(".more-career").removeClass("d-none")
-    }
-
-    window.addEventListener("scroll", () => {
-      const winScroll = window.scrollY;
-      
-        if(winScroll >= lastAccElemPos - 120) {
-          $(".more-career").addClass("absolute-career-icon");
-          $(".more-career img").addClass("rotate-arrow");
-        } else {
-          $(".more-career").removeClass("absolute-career-icon");
-          $(".more-career img").removeClass("rotate-arrow");
-        }
+      document.querySelector("button.close").click();
     })
-
+}
   }
   
 
-};
-export {careersAccordion,fileInput,scrollCareers}
+export {careersAccordion,fileInput, handleCareersForm}

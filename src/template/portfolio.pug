@@ -10,7 +10,42 @@ block unique-content
                 .content-title.text-center.mb-3 PORTFOLİO
                 .content-motto.text-center
                     | Send us your ideas to implement your project
-                a.d-block.max-w-20.mx-auto.btn.content-btn.text-black.mt-4(href="#") TAKE ACTION   
+                button.btn.content-btn.text-black.mt-4.mx-auto.d-block(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
+                #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                    .modal-dialog.mx-auto.idea-modal(role='document')                      
+                        .modal-content.h-100.mx-auto.mt-5.idea-modal__content
+                            button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') &times;
+                            .modal-header.p-0.my-modal-header
+                                .idea-modal__title Send Your Idea    
+                            .alert.modal-alert(role="alert")
+                            form.mt-3(action="")
+                                .d-flex.flex-wrap.justify-content-around
+                                    .form-item                                    
+                                        input#name.idea-input(type="text", name="name",required="")
+                                        label.idea-label(for="name") Your Name
+                                    .form-item                                      
+                                        input#surname.idea-input(type="text", name="surname", required="")
+                                        label.idea-label(for="surname") Your Surname
+                                    .form-item                  
+                                        input#email.idea-input(type="email", name="email", required="")
+                                        label.idea-label(for="email") Your Email
+                                    .form-item                                      
+                                        .d-flex.w-100
+                                            select#selectLand.idea-input.form-select.pr-0.pb-0(name="")
+                                                option AZ
+                                                option EN
+                                                option RU
+                                            .form-column.my-3
+                                            input#number.idea-input.pl-4.number-input(type="number",max="9", required="")
+                                            label.number-label.idea-label.text-nowrap(for="number") Your Number
+                                .idea-title-div.w-100
+                                    input#idea-title.idea-input(type="text", name="idea-title", required="")
+                                    label.idea-label(for="idea-title") Idea Title
+                                .idea-textarea.w-100                   
+                                    textarea#idea.w-100.idea-input(name="yourIdea", rows="7", required="")
+                                    label.idea-label(for="idea") Your Idea
+                                button#sendBtn.w-100.idea-modal-btn(type="submit") SEND
         #main-content.container
             #portfolioWrapper.portfolio-wrapper.position-relative.d-flex.flex-wrap.mx-auto.MB-10
                 .work-row.w-100
@@ -48,11 +83,6 @@ block unique-content
                     .portfolio-work
                         img(src="./img/Community835x373.jpg", alt="")
                         .blue-div
-                .show-more.a-x-auto.mx-auto
-                    img.mx-auto(src="./img/icons/icon_scrool_down_white.svg")
-                    span.scroll-text.more scroll to see more
-                    
-                
 
       
     include ../pug_includes/footer.pug

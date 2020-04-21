@@ -31,53 +31,23 @@
                 color: $content-black
                 img
         .accordion-content
+            display: flex
+            align-items: flex-end
             padding: 1rem 3rem 3rem 3rem
             .accordion-text
                 font: 400 16px $main-font
                 color: $content-black
                 line-height: 26px
                 padding-right: 25rem
-            .accordion-btns
-                align-items: flex-end
-                position: relative
-                form
-                    display: flex
-                    .upload-btn
-                        position: relative
-                        display: flex
-                        align-items: center
-                        font: 700 1.5rem $main-font
-                        color: $second-color
-                        background-color: white
-                        border-radius: 3rem
-                        padding: 1.4rem 5rem
-                        cursor: pointer
-                        border: 1px solid $main-color	
-                        outline: none!important
-                        transition: 0.4s ease
-                        &:hover
-                            background-color: $main-color
-                            color: white
-                        i
-                            font-size: 15px
-                            position: absolute
-                            right: 12px
-                            transition: all 0.4s
-                            visibility: hidden
-                    .accordion-btn
-                        font: 600 16px $main-font
-                        color: white
-                        background-color: $main-color
-                        width: 19.8rem
-                        height: 6rem
-                        border-radius: 3rem
-                        outline: none!important
-                        border: 1px solid $main-color
-                        cursor: pointer
-                        transition: 0.4s ease
-                        &:hover
-                            background-color: white
-                            color: $main-color
+            .apply-btn
+                font: 600 1.6rem $main-font
+                color: white
+                background-color: $main-color
+                height: 6rem
+                &:hover
+                    background-color: white
+                    color: $main-color
+
 
 .accordion-item--active
     .accordion-item__header
@@ -111,6 +81,3 @@
                 flex-direction: column
                 .accordion-text
                     padding-right: 0
-                .accordion-btns
-                    form
-                        display: flex
