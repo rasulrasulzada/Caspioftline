@@ -16,7 +16,28 @@
   background: black
   left: 0
   right: 0
-  padding: 0 4rem
+  // padding: 0 4rem
+  padding: 0 1rem
+  margin: 0 auto
+
+@media (min-width: 576px)
+  .sticky-navbar
+    max-width: 540px
+@media (min-width: 768px)
+  .sticky-navbar
+    max-width: 720px
+@media (max-width: 768px) and (min-width: 576px)
+  .sticky-navbar
+    max-width: 100%
+@media (min-width: 992px)
+  .sticky-navbar
+    max-width: 960px
+@media (min-width: 1200px)
+  .sticky-navbar
+    max-width: 1140px
+
+
+
 
 .nv-link--active
   color: $main-color

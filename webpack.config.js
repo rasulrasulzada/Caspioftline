@@ -26,9 +26,7 @@ function generateHtmlPlugins (templateDir) {
 const htmlPlugins = generateHtmlPlugins('./src/template')
 
 module.exports = {
-  entry: {
-    index: "./src/js/main.js"
-  },
+  entry: ["@babel/polyfill", "./src/js/main.js"],
   output: {
     path: path.resolve(__dirname, "lib"),
     filename: "all.min.js"
