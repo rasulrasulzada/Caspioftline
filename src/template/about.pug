@@ -1,8 +1,9 @@
 extends ../pug_includes/head
 
 block unique-content
-    .container.px-3.position-absolute.nav-wrapper
-        include ../pug_includes/navbar.pug
+    header#header.header
+        .container.px-3.position-absolute.nav-wrapper
+            include ../pug_includes/navbar.pug
     main.main
         .d-flex.align-items-center.position-relative
            .img-div(style="background-image: url('./img/about_us_1170x700.jpg')")
@@ -12,7 +13,29 @@ block unique-content
                 .content-title.text-center.mb-3 ABOUT US
                 .content-motto.text-center
                     | MORE LIKE A FAMILY
-                a.d-block.max-w-20.mx-auto.btn.content-btn.content-btn--white.mt-4(href="#") JOIN US       
+                button#careersJoinBtn.btn.content-btn.content-btn--white.mt-4.mx-auto.d-block(type='button', data-toggle='modal', data-target='#ideaModal') JOIN US
+                #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                    .modal-dialog.mx-auto.idea-modal(role='document')                      
+                        .modal-content.mx-auto.mt-5.idea-modal__content
+                            .successfull
+                                i.fa.fa-check-circle.mb-5
+                                .text.mt-5 Successfully Sent
+                            .modal-header.p-0.my-modal-header.mb-3
+                                .idea-modal__title Apply Us
+                                button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
+                                    img(src="./img/icons/back-X.svg") 
+                            form#careersForm.mt-5(action="")
+                                .form-item.w-100                                  
+                                    select#selectPosition.idea-input.form-select.pr-0.pb-0.w-100(name="")
+                                        option Digital Marketolog
+                                        option Back-End Developer
+                                        option Front-End Developer
+                                        option UX/UI Designer
+                                    label.idea-label(for="selectPosition") Your Position
+                                .message-item.w-100.mb-0.d-flex.flex-column
+                                    input#careersEmail.message-input(type="email", name="idea-title", required="")
+                                    label.message-label(for="careersEmail") E-mail Adress
+                                button#careersSendBtn.message-btn.py-3.mt-3.w-100(type="submit") SEND         
         #main-content.container.px-3
             .about-team.MT-10.MB-10
                 .content-header.mb-3

@@ -1,8 +1,9 @@
 extends ../pug_includes/head
 
 block unique-content
-    .container.px-3.position-absolute.nav-wrapper
-        include ../pug_includes/navbar.pug
+    header#header.header
+        .container.px-3.position-absolute.nav-wrapper
+            include ../pug_includes/navbar.pug
     main.main
         .d-flex.align-items-center.position-relative.top-div
            .container.p-0.position-absolute.a-x-auto
@@ -10,14 +11,14 @@ block unique-content
                 .content-title.text-center.mb-3 PORTFOLİO
                 .content-motto.text-center
                     | Send us your ideas to implement your project
-                button.btn.content-btn.text-black.mt-4.mx-auto.d-block(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
+                button.btn.content-btn.content-btn--white.mt-4.mx-auto.d-block(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
                 #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                     .modal-dialog.mx-auto.idea-modal(role='document')                      
-                        .modal-content.h-100.mx-auto.mt-5.idea-modal__content
-                            button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
-                                span(aria-hidden='true') &times;
+                        .modal-content.h-100.mx-auto.mt-5.idea-modal__content    
                             .modal-header.p-0.my-modal-header
-                                .idea-modal__title Send Your Idea    
+                                .idea-modal__title Send Your Idea 
+                                button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
+                                    img(src="./img/icons/back-X.svg")    
                             .alert.modal-alert(role="alert")
                             form.mt-3(action="")
                                 .d-flex.flex-wrap.justify-content-around

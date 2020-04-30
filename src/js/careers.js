@@ -59,7 +59,8 @@ const handleCareersForm = () => {
     }
 
     const careersForm = document.getElementById("careersForm")
-    careersForm.addEventListener("submit", (e) => {
+    if (careersForm) {
+      careersForm.addEventListener("submit", (e) => {
       e.preventDefault()
       const selectPosition = document.getElementById("selectPosition")
       const position = selectPosition.options[selectPosition.selectedIndex].textContent.trim();
@@ -67,6 +68,7 @@ const handleCareersForm = () => {
       const data = {position, email}
 
       console.log(data)//POST
+      
       document.querySelector(".successfull").classList.add("d-flex")
       setTimeout(() => {
         document.querySelector(".successfull").classList.remove("d-flex")
@@ -74,6 +76,8 @@ const handleCareersForm = () => {
         document.querySelector("button.close").click();
       }, 700);
     })
+    }
+    
 }
   }
   

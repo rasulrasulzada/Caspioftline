@@ -34,10 +34,11 @@ $(document).ready(function () {
   const stickyNav = () => {
     window.addEventListener("scroll", function () {
       const nav = document.querySelector("nav");
+      const header = document.getElementById("header") 
       if (window.scrollY > nav.offsetTop) {
-        nav.classList.add("sticky-navbar");
+        header.classList.add("fixed-header");
       } else {
-        nav.classList.remove("sticky-navbar");
+        header.classList.remove("fixed-header");
       }
     });
   };

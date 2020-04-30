@@ -17,16 +17,14 @@
         background-color: $modal-bg-color
         .my-modal-header
             border: 0
+            display: flex
+            justify-content: space-between
     &__title
         font: 600 18px $main-font
         // margin-bottom: 4rem
 .modal-alert
     visibility: hidden
 .custom-close
-    font-size: 22px
-    position: absolute
-    top: 3px
-    right: 3px
     z-index: 1
     outline: none!important
     span
@@ -70,7 +68,7 @@
     font: 500 16px $main-font
     color: $second-color
     border: 0
-    border-bottom: 1px solid #1E60A0
+    border-bottom: 0.5px solid #1E60A0
     outline: none!important
     background-color: transparent
     &:valid + label

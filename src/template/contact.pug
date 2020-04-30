@@ -1,8 +1,9 @@
 extends ../pug_includes/head
 
 block unique-content
-    .container.px-3.position-absolute.nav-wrapper
-        include ../pug_includes/navbar.pug
+    header#header.header
+        .container.px-3.position-absolute.nav-wrapper
+            include ../pug_includes/navbar.pug
     main.main
         .d-flex.align-items-center.position-relative
            .map.w-100

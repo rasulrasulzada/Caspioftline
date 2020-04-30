@@ -1,8 +1,9 @@
 extends ../pug_includes/head
 
 block unique-content
-    .container.px-3.position-absolute.nav-wrapper
-        include ../pug_includes/navbar.pug
+    header#header.header
+        .container.px-3.position-absolute.nav-wrapper
+            include ../pug_includes/navbar.pug
     main.main
         .d-flex.align-items-center.position-relative
            .img-div(style="background-image: url('./img/home_slide_1170x700.jpg')")
@@ -12,14 +13,14 @@ block unique-content
                 .content-title.mb-3 CASPISOFTLINE
                 .content-motto
                     | FAST AND SMOOTH TECHNICAL LAUNCH FOR YOUR STARTUP
-                button.btn.content-btn.text-black.mt-4(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
+                button.btn.content-btn.content-btn--white.mt-4(type='button', data-toggle='modal', data-target='#ideaModal') SEND IDEA
                 #ideaModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                     .modal-dialog.mx-auto.idea-modal(role='document')                      
                         .modal-content.h-100.mx-auto.mt-5.idea-modal__content
-                            button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
-                                span(aria-hidden='true') &times;
                             .modal-header.p-0.my-modal-header
-                                .idea-modal__title Send Your Idea    
+                                .idea-modal__title Send Your Idea 
+                                button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')  
+                                    img(src="./img/icons/back-X.svg") 
                             .alert.modal-alert(role="alert")
                             form.mt-3(action="")
                                 .d-flex.flex-wrap.justify-content-around
@@ -70,7 +71,7 @@ block unique-content
                     .content-title.mb-3 CASPISOFTLINE
                     .content-motto
                         | EXPLORE OUR PORTFOLİO
-                    a.content-btn.text-black.d-inline-block.mt-4(href="") EXPLORE
+                    a.content-btn.content-btn--white.d-inline-block.mt-4(href="") EXPLORE
             .portfolio__works
                 .work-row.w-100
                     a.portfolio-work(href="#")
