@@ -25,11 +25,21 @@
 .modal-alert
     visibility: hidden
 .custom-close
+    margin-right: 0!important
+    padding-right: 0!important 
     z-index: 1
     outline: none!important
-    span
-        cursor: pointer!important
-        font-size: 36px
+
+.close-img
+    width: 14px!important
+    height: 14px!important
+    background-image: url("./img/icons/back-X.svg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    transition: 0.4s
+    &:hover
+        background-image: url("./img/icons/cancel-blue.svg")
 .form-item
     width: 24rem
     margin-bottom: 2rem

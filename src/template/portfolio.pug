@@ -18,7 +18,7 @@ block unique-content
                             .modal-header.p-0.my-modal-header
                                 .idea-modal__title Send Your Idea 
                                 button.close.custom-close.mr-4(type='button', data-dismiss='modal', aria-label='Close')
-                                    img(src="./img/icons/back-X.svg")    
+                                    .close-img   
                             .alert.modal-alert(role="alert")
                             form.mt-3(action="")
                                 .d-flex.flex-wrap.justify-content-around
@@ -37,7 +37,6 @@ block unique-content
                                                 option AZ
                                                 option EN
                                                 option RU
-                                            .form-column.my-3
                                             input#number.idea-input.pl-4.number-input(type="number",max="9", required="")
                                             label.number-label.idea-label.text-nowrap(for="number") Your Number
                                 .idea-title-div.w-100

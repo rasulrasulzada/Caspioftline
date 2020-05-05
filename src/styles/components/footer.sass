@@ -32,9 +32,24 @@
 
 .social-banner
     border-top: 1px solid $content-black
-    img 
+    .facebook 
         width: 17px
-        height: 18px
+        height: 19px
+        background-image: url("./img/icons/facebook.svg")
+        background-repeat: no-repeat
+        background-position: center
+        transition: 0.4s
+        &:hover
+            background-image: url("./img/icons/facebook-blue.svg")
+    .linkedin
+        width: 18px
+        height: 17px
+        background-image: url("./img/icons/linkedin.svg")
+        background-repeat: no-repeat
+        background-position: center
+        transition: 0.4s
+        &:hover
+            background-image: url("./img/icons/linkedin-blue.svg")
     &__container
         justify-content: flex-end
 
